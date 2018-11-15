@@ -13,8 +13,8 @@ namespace CalcMealCost
             double meal_cost;
             int tip_percent;
             int tax_percent;
-            var totalCost = Solve(12.00, 20, 8);
-            Console.WriteLine("Total cost of meal: " + totalCost);
+            var totalCost = Solve(47.00, 20, 8);
+            
         }
 
         static double Solve(double meal_cost, int tip_percent, int tax_percent)
