@@ -10,8 +10,8 @@ namespace ReviewConditionalsAndLoops
     {
         static void Main(string[] args)
         {
-            string S1 = "Hacker";
-            string S2 = "Rank";
+            string S1 = "ivvkxq";
+            string S2 = "ivvkx";
             string even1 = "";
             string odd1 = "";
             string even2 = "";
