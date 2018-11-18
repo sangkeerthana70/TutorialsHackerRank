@@ -23,9 +23,9 @@ namespace Arrays
             Console.WriteLine();
             //Reverse an array
             // Reverses the sort of the values of the Array.
-            Array.Reverse(arr1);
+            Array.Reverse(arr2);
 
-            foreach( int i in arr1)
+            foreach( int i in arr2)
             {
                 Console.Write(i + " ");
             }
