@@ -18,12 +18,12 @@ namespace DataTypes
             // Read and save an integer, double, and String to your variables.
             
             int i2 = Convert.ToInt32(Console.ReadLine());
-            i2 = 8;
+            //i2 = 8;
             
             double d2 = Convert.ToDouble(Console.ReadLine());
-            d2 = 4.0;
+            //d2 = 4.0;
             string s2 = Console.ReadLine();
-            s2 = "is the best place to learn coding!";
+            //s2 = "is the best place to learn coding!";
 
             // Print the sum of both integer variables on a new line.
             Console.WriteLine(i + i2);
