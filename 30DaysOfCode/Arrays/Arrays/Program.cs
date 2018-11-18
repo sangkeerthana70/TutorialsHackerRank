@@ -10,6 +10,7 @@ namespace Arrays
     {
         static void Main(string[] args)
         {
+            /*
             int[] arr1 = new int[] { 1, 4, 3, 2};
             int[] arr2 = new int[4];
 
@@ -29,7 +30,34 @@ namespace Arrays
             {
                 Console.Write(i + " ");
             }
+            */
 
+            //for (int i = 10; i >= 0; i--)
+            //{
+            //    Console.WriteLine(i);
+
+            //}
+
+            int[] arr1 = new int[] { 5, 4, 3, 2 };
+            int[] arr2 = new int[4];
+
+            int len = arr1.Length - 1;
+
+            for(int i=len; i >= 0; i--)
+            {
+                Console.WriteLine("i = " + i);
+                Console.WriteLine("arr1[i] = " + arr1[i] );
+                Console.WriteLine();
+                
+                arr2[len - i] = arr1[i];
+            }
+            Console.WriteLine("Copy reversed element in arr1 to arr2");
+            foreach ( int num in arr2)
+            {
+                Console.WriteLine(num);
+            }
+
+            
         }
     }
 }
