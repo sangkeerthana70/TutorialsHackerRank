@@ -13,7 +13,7 @@ namespace BirthdayCakeCandles
             int totalCandles = 4;
             int[] ar = new int[] { 3, 2, 1, 3 };
             var result = birthdayCakeCandles(ar);
-            Console.WriteLine(result);
+            Console.WriteLine("Total candles blown: " + result);
 
         }
 
@@ -22,15 +22,15 @@ namespace BirthdayCakeCandles
         {
             int tallCandle = 0;
             int totalBlown = 0;
-
+            Console.WriteLine(ar.Length);
             for (int i = 0; i < ar.Length; i++){
-                Console.WriteLine("Loop: " , i);
-                Console.WriteLine("Curr Elem: " , ar[i]);
+                Console.WriteLine("Loop: " + i);
+                Console.WriteLine("Curr Elem: " + ar[i]);
                 if (ar[i] > tallCandle  )
                 {
                     tallCandle = ar[i];
                     totalBlown += 1;
-                    Console.WriteLine("Array elem is greater than counter");
+                    Console.WriteLine("Array elem is greater than tallCandle");
                 }
                 else if (ar[i] ==  tallCandle)
                 {
