@@ -10,7 +10,7 @@ namespace MiniMaxSum
     {
         static void Main(string[] args)
         {
-            int[] arr = new int[] {1, 3, 5, 7, 9};
+            int[] arr = new int[] {1, 2, 3, 4, 5};
             miniMaxSum(arr);
         }
 
@@ -21,10 +21,15 @@ namespace MiniMaxSum
             long sumMax = 0;
 
             Array.Sort(arr);
-            for (int num = arr[0]; num < arr.Length - 1; num++)
+            for (int num = arr[0]; num <= arr.Length - 1; num++)
             {
                 Console.WriteLine("First elem in arr: " + arr[0]);
                 Console.WriteLine(num);
+                Console.WriteLine("Fourth elem: " + arr[4]);
+                if (arr[num] == arr[4])
+                {
+                    break;
+                }
                 sumMin = arr[num] + arr[num + 1];
                 
             }
