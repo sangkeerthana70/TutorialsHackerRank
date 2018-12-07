@@ -21,34 +21,23 @@ namespace MiniMaxSum
             long sumMax = 0;
 
             Array.Sort(arr);
-            for (int i = 0; i <= arr.Length - 1; i++)
+            for (int i = 0; i < arr.Length - 1; i++)
             {
-                Console.WriteLine("First elem in arr: " + arr[0]);
-                //Console.WriteLine("i is: " + i);
-                Console.WriteLine("Fourth elem: " + arr[3]);
-                if (arr[i] == arr[4])
-                {
-                    break;
-                }
-                
+                Console.WriteLine("i : " + i);
+                Console.WriteLine("arr[i] : " + arr[i]);
+               
                 sumMin += arr[i];
-                Console.WriteLine("SumMin in loop: " +  i + sumMin);
+                Console.WriteLine("sumMin : " + sumMin);
                 
             }
-            //Console.WriteLine("Second element: " + arr[1]);
-            //Console.WriteLine("ARR Len: " + arr.Length);
-            for (int i = 1; i <= arr.Length; i++)
+            
+            for (int i = 1; i < arr.Length; i++)
             {
-                Console.WriteLine("Second elem in arr: " + arr[1]);
-                
-                if (arr[i] == arr[4])
-                {
-                    sumMax += arr[4];
-                    break;
-                }
-                //Console.WriteLine("arr[i]: " + arr[i]);
+                Console.WriteLine("i : " + i);
+                Console.WriteLine("arr[i] : " + arr[i]);
+
                 sumMax += arr[i];
-                Console.WriteLine("SumMax in loop: " + i + sumMax);
+                Console.WriteLine("SumMax: " +  sumMax);
             }
             Console.WriteLine(sumMin + " " + sumMax);
                         
