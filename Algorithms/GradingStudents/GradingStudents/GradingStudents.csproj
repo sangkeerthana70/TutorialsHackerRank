@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BD6DEE9C-AFF8-4C3B-B9C3-C87CE83BF22A}</ProjectGuid>
+    <ProjectGuid>{B736B033-DB91-4064-B141-79A4C44893E5}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>MiniMaxSum</RootNamespace>
-    <AssemblyName>MiniMaxSum</AssemblyName>
+    <RootNamespace>GradingStudents</RootNamespace>
+    <AssemblyName>GradingStudents</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
