@@ -10,8 +10,8 @@ namespace GradingStudents
     {
         static void Main(string[] args)
         {
-            int noOfStudents = 4;
-            int[] grades = new int[] { 84, 94, 21, 0, 18, 100, 18, 62, 30, 61, 53, 0, 43, 2, 29, 53, 61, 40, 14, 4, 29, 98, 37, 23, 46, 9, 79, 62, 20, 38, 51, 99, 59, 47, 4, 86, 61, 68, 17, 45, 6, 1, 95, 95 };
+            int noOfStudents = 6;
+            int[] grades = new int[] { 84, 94, 21, 0, 18, 100};
 
             int[] result = gradingStudents(grades);
             foreach(int i in result)
@@ -46,17 +46,26 @@ namespace GradingStudents
                         finalGrade = grades[i];
                         //Console.WriteLine("Final grade: " + finalGrade);
                     }
-                    else
+                    else //(multipleOfFive != 0) or not  mutiple of five
                     {
-                        finalGrade = grades[i] + 2;
+                        var difference = 5 - multipleOfFive;
+                        Console.WriteLine(difference);
+                        finalGrade = grades[i] + difference;
                         //Console.WriteLine("Final grade: " + finalGrade);
                     }
+                    
                 }
-                gradeArr.Add(finalGrade);               
+                gradeArr.Add(finalGrade);
+
             }
+            
+
             newArr = gradeArr.ToArray();
             return newArr;
 
         }
+            
+
+        
     }
 }
