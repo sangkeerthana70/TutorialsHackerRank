@@ -32,12 +32,25 @@ namespace forLoop
             Console.WriteLine(minValue);
             for(int i = 0; i < arr.Length; i++)
             {
+                //calculate sum of all numbers in an array
                 sum += arr[i];
+                //calculte the average of all numbers in an array
                 average = sum / arr.Length;
 
+                //to sum two consecutive numbers in an array
                 int sumTwoNums = 0;
-                sumTwoNums += arr[i];
+                if (arr[i] == arr.Length - 1)
+                {
+                    Console.WriteLine(sumTwoNums);
+                    sumTwoNums = arr[i] + arr[0];
+                }
+                Console.WriteLine(sumTwoNums);
+                sumTwoNums += arr[i] + arr[i + 1];
+                
+                
                 Console.WriteLine("sum two nums: " + sumTwoNums);
+
+                //calculate the minimum value in an array
                 if (arr[i] < minValue)
                 {
                     minValue = arr[i];
