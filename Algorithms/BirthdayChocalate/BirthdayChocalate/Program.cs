@@ -21,11 +21,14 @@ namespace BirthdayChocalate
         {
             int checkSumLength = 0;
             int noOfsquares = 0;
+            Console.WriteLine("List count: " + s.Count);
             for (int i = 0; i < s.Count; i++)
             {
                 Console.WriteLine("Loop: " + i);
                 Console.WriteLine("s[i]: " + s[i]);
-                for (int j = i; j < m; j++)
+                checkSumLength = 0;
+                
+                for (int j = i; j < s.Count; j++)
                 {
                     
                     Console.WriteLine("J is: " + j);
@@ -35,6 +38,7 @@ namespace BirthdayChocalate
                     if (checkSumLength == d)
                     {
                         noOfsquares += 1;
+                        break;
                         
                         Console.WriteLine("Skip to next elem in array");
       
