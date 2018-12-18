@@ -19,41 +19,44 @@ namespace BirthdayChocalate
         // Complete the birthday function below.
         static int birthday(List<int> s, int d, int m)
         {
-            int checkSumLength = 0;
-            int noOfsquares = 0;
-            Console.WriteLine("List count: " + s.Count);
+            
+            int noOfPortions = 0;
+            //Console.WriteLine("List count: " + s.Count);
+            
             for (int i = 0; i < s.Count; i++)
             {
-                Console.WriteLine("Loop: " + i);
+                Console.WriteLine("i:" + i);
                 Console.WriteLine("s[i]: " + s[i]);
-                checkSumLength = 0;
-                
-                for (int j = i; j < s.Count; j++)
+                int checkSumLength = 0;
+                for (int j = i; j < m; j++)
                 {
                     
-                    Console.WriteLine("J is: " + j);
-                    Console.WriteLine("s[j]: " + s[j]);
-                    checkSumLength += s[j];
-                    Console.WriteLine("Sum: " + checkSumLength);
-                    if (checkSumLength == d)
+                    Console.WriteLine("j : " + j);
+                    Console.WriteLine("s[j] : " + s[j]);
+                    
+
+                    checkSumLength = s[j] + s[j + 1];
+                    Console.WriteLine("Sum in loop: " + checkSumLength);
+                    if ( checkSumLength == d)
                     {
-                        noOfsquares += 1;
-                        break;
-                        
-                        Console.WriteLine("Skip to next elem in array");
-      
+                        noOfPortions += 1;
+                        j++;
+                        Console.WriteLine("Iterating to next loop");
                     }
                     else
                     {
-                       
-                        Console.WriteLine("Sum is not equal to date");
+                        j++;
                     }
-                      
+                    
                 }
-               
+                
+                
+
+
             }
-            Console.WriteLine("NoOfSquares: " + noOfsquares);
-            return noOfsquares;
+            Console.WriteLine("NoOfPortions: " + noOfPortions);
+            return noOfPortions;
+    
 
         }
     }
