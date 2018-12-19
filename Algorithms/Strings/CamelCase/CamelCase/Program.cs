@@ -23,7 +23,7 @@ namespace CamelCase
                 if (IsUpper(s[i]))
                 {
 
-                    wordCount += 1;
+                    wordCount ++;
                 }
                 else
                 {
@@ -32,15 +32,16 @@ namespace CamelCase
                 }
 
             }
-            Console.WriteLine(wordCount);
+            Console.WriteLine("Word count: " + wordCount);
             return wordCount;
 
         }
 
-        //private static bool IsUpper(char v)
-        //{
-        //    throw new NotImplementedException();
+        private static bool IsUpper(char s)
+        {
+            //    throw new NotImplementedException();
+            return true;
 
-        //}
+        }
     }
 }
