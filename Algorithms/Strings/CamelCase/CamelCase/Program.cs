@@ -20,16 +20,18 @@ namespace CamelCase
             int wordCount = 1;
             for (int i = 0; i < s.Length; i++)
             {
-                if (IsUpper(s[i]))
+                
+
+                if (Char.IsUpper(s[i]))
                 {
 
                     wordCount ++;
                 }
-                else
-                {
-                    Console.WriteLine("char is lower case");
+                //else
+                //{
+                //    Console.WriteLine("char is lower case");
                     
-                }
+                //}
 
             }
             Console.WriteLine("Word count: " + wordCount);
@@ -37,11 +39,6 @@ namespace CamelCase
 
         }
 
-        private static bool IsUpper(char s)
-        {
-            //    throw new NotImplementedException();
-            return true;
-
-        }
+ 
     }
 }
