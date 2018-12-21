@@ -10,8 +10,8 @@ namespace strongPassword
     {
         static void Main(string[] args)
         {
-            int n = 11;
-            string password = "#HackerRank";
+            int n = 3;
+            string password = "Ab1";
             int answer = minimumNumber(n, password);
             Console.WriteLine("Answer: " + answer);
         }
@@ -21,28 +21,26 @@ namespace strongPassword
         {
 
             // Return the minimum number of characters to make the password strong
-            int uppChar = 0;
-            int lowerChar = 0;
-            int specialChar = 0;
-            int numChar = 0;
+            bool upperCharFound = false;
+            bool lowerCharFound = false;
+            bool specialCharFound = false;
+            bool numCharFound = false;
+            int result = 0;
             int passwordCount = password.Length;
             string special_characters = "!@#$%^&*()-+";
             string numbers = "0123456789";
 
             for (int i = 0; i < password.Length; i++)
             {
-                
-                if (password.Length == n)
-                {
-
+      
                     if (char.IsUpper(password[i]))
                     {
-                        uppChar += 1;
+                        upperCharFound = true;
                         Console.WriteLine("has one upperCharacter");
                     }
                     if (char.IsLower(password[i]))
                     {
-                        lowerChar += 1;
+                        lowerCharFound = true;
                         Console.WriteLine("has one lower");
                     }
                     
@@ -50,7 +48,7 @@ namespace strongPassword
                     {
                         if (password[i] == special_characters[c])
                         {
-                            specialChar += 1;
+                            specialCharFound = true;
                             Console.WriteLine("has a special character");
                         }
                     }
@@ -59,24 +57,15 @@ namespace strongPassword
                     {
                         if(password[i] == numbers[num])
                         {
-                            numChar += 1;
+                            numCharFound = true;
+                            Console.WriteLine("Has one number");
                         }
                     }
                   
-                }
+                    
 
             }
-            if ((uppChar == 1 && lowerChar == 1 && specialChar == 1 && numChar == 1) && passwordCount == 8)
-            {
-                Console.WriteLine("Has all requirements");
-                return passwordCount;
-                
-            }
-            else
-            {
-                Console.WriteLine("Not met all requirements");
-                
-            }
+            
             return passwordCount;
 
 
