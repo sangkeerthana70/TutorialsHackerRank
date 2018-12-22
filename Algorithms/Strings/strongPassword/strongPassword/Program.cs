@@ -25,7 +25,7 @@ namespace strongPassword
             bool lowerCharFound = false;
             bool specialCharFound = false;
             bool numCharFound = false;
-            int specialElementsFound = 0;
+            
             //int passwordLength = password.Length;
             int minNumCharsToAdd = 0;
             int missingElem = 0;
@@ -39,14 +39,12 @@ namespace strongPassword
                     
                     if (char.IsUpper(password[i]))
                     {
-                        upperCharFound = true;
-                       // specialElementsFound += 1;
+                        upperCharFound = true;                        
                         Console.WriteLine("has one upperCharacter");
                     }
                     if (char.IsLower(password[i]))
                     {
-                        lowerCharFound = true;
-                        //specialElementsFound += 1;
+                        lowerCharFound = true;                        
                         Console.WriteLine("has one lower");
                     }
                     
@@ -54,8 +52,7 @@ namespace strongPassword
                     {
                         if ((password[i] == special_characters[c]))
                         {
-                            specialCharFound = true;
-                            //specialElementsFound += 1;
+                            specialCharFound = true;                            
                             Console.WriteLine("has a special character");
                         }
                     }
@@ -72,13 +69,7 @@ namespace strongPassword
 
                     
             }
-            //Console.WriteLine("specialElementsFound: " + specialElementsFound);
-
-            if (specialElementsFound < 4)
-            {
-                missingElem = 4 - specialElementsFound;
-                Console.WriteLine("missingElem " + missingElem);
-            }
+            
 
             missingElem = 0;
 
