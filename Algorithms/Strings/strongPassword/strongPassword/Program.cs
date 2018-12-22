@@ -10,8 +10,8 @@ namespace strongPassword
     {
         static void Main(string[] args)
         {
-            int n = 11;
-            string password = "#HackerRank";
+            int n = 3;
+            string password = "Ab1";
             int answer = minimumNumber(n, password);
             Console.WriteLine("Answer: " + answer);
         }
