@@ -10,8 +10,8 @@ namespace strongPassword
     {
         static void Main(string[] args)
         {
-            int n = 3;
-            string password = "Ab1";
+            int n = 11;
+            string password = "#HackerRank";
             int answer = minimumNumber(n, password);
             Console.WriteLine("Answer: " + answer);
         }
@@ -25,49 +25,70 @@ namespace strongPassword
             bool lowerCharFound = false;
             bool specialCharFound = false;
             bool numCharFound = false;
-            int result = 0;
-            int passwordCount = password.Length;
+            int specialElementsFound = 0;
+            //int passwordLength = password.Length;
+            int minNumCharsToAdd = 0;
+            int missingElem = 0;
+
+
             string special_characters = "!@#$%^&*()-+";
             string numbers = "0123456789";
 
             for (int i = 0; i < password.Length; i++)
             {
-      
+                    
                     if (char.IsUpper(password[i]))
                     {
                         upperCharFound = true;
+                        specialElementsFound += 1;
                         Console.WriteLine("has one upperCharacter");
                     }
                     if (char.IsLower(password[i]))
                     {
                         lowerCharFound = true;
+                        specialElementsFound += 1;
                         Console.WriteLine("has one lower");
                     }
                     
                     for( int c = 0; c < special_characters.Length; c++)
                     {
-                        if (password[i] == special_characters[c])
+                        if ((password[i] == special_characters[c]))
                         {
                             specialCharFound = true;
+                            specialElementsFound += 1;
                             Console.WriteLine("has a special character");
                         }
                     }
 
                     for ( int num = 0; num < numbers.Length; num++)
                     {
-                        if(password[i] == numbers[num])
+                        if((password[i] == numbers[num]))
                         {
                             numCharFound = true;
-                            Console.WriteLine("Has one number");
+                            specialElementsFound += 1;
+                            Console.WriteLine("Has one number"); 
                         }
                     }
-                  
-                    
-
             }
-            
-            return passwordCount;
+            Console.WriteLine("specialElementsFound: " + specialElementsFound);
 
+            
+            if (specialElementsFound < 4 )
+            {
+                 missingElem = 4 - specialElementsFound ;
+                Console.WriteLine("missingElem " + missingElem);
+            }
+             
+            if ( (n + missingElem) >= 6)
+            {
+                minNumCharsToAdd = 0;
+            }
+            else
+            {
+                minNumCharsToAdd =  6 - n;
+            }
+            return minNumCharsToAdd;
+            
 
         }
     }
