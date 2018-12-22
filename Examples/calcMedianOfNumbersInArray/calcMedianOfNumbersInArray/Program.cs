@@ -10,21 +10,44 @@ namespace calcMedianOfNumbersInArray
     {
         static void Main(string[] args)
         {
-            int[] arr = new int[] { 12, 3, 5 };
+            int[] arr = new int[] { 3, 5, 7, 12, 13, 14, 21, 23, 23, 23, 23, 29, 40, 56 };
 
-            int[] arr2 = new int[] { };
+            //int[] arr2 = new int[] { };
             
              Array.Sort(arr);
-            
-           
+
+            int median = 0;
+            int arrLength =  arr.Length;
             Console.WriteLine("After sorting the elements in arr: ");
-            foreach(int sortedItem in arr)
-            {               
-                Console.Write(sortedItem);
+            for(int i = 0; i < arr.Length; i++)
+            {
+                Console.Write("sortedItem: " + arr[i]);
                 Console.WriteLine();
+
+                //if length of arr is odd
+                
+                if (arrLength % 2 != 0)
+                {
+                    Console.WriteLine(arr.Length % 2);
+                    median = arr[arrLength / 2];
+                    Console.WriteLine("median: " + median);
+                }
+                //if length is even
+                else
+                {
+                    
+                    Console.WriteLine("Middle element1: " + arr[(arrLength / 2) - 1]);
+                    Console.WriteLine("Middle element2: " + arr[arrLength / 2]);
+                    median = (arr[arrLength / 2] + arr[(arrLength / 2) - 1]) / 2;
+                    Console.WriteLine("Median: " + median);
+                }
             }
-            //if length is even 
-            //if length is odd
+            
+             
+
+
+
+
         }
     }
 }
