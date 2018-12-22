@@ -10,8 +10,8 @@ namespace strongPassword
     {
         static void Main(string[] args)
         {
-            int n = 3;
-            string password = "Ab1";
+            int n = 11;
+            string password = "#HackerRank";
             int answer = minimumNumber(n, password);
             Console.WriteLine("Answer: " + answer);
         }
@@ -40,13 +40,13 @@ namespace strongPassword
                     if (char.IsUpper(password[i]))
                     {
                         upperCharFound = true;
-                        specialElementsFound += 1;
+                       // specialElementsFound += 1;
                         Console.WriteLine("has one upperCharacter");
                     }
                     if (char.IsLower(password[i]))
                     {
                         lowerCharFound = true;
-                        specialElementsFound += 1;
+                        //specialElementsFound += 1;
                         Console.WriteLine("has one lower");
                     }
                     
@@ -55,7 +55,7 @@ namespace strongPassword
                         if ((password[i] == special_characters[c]))
                         {
                             specialCharFound = true;
-                            specialElementsFound += 1;
+                            //specialElementsFound += 1;
                             Console.WriteLine("has a special character");
                         }
                     }
@@ -65,30 +65,53 @@ namespace strongPassword
                         if((password[i] == numbers[num]))
                         {
                             numCharFound = true;
-                            specialElementsFound += 1;
+                            //specialElementsFound += 1;
                             Console.WriteLine("Has one number"); 
                         }
                     }
-            }
-            Console.WriteLine("specialElementsFound: " + specialElementsFound);
 
-            
-            if (specialElementsFound < 4 )
+                    
+            }
+            //Console.WriteLine("specialElementsFound: " + specialElementsFound);
+
+            if (specialElementsFound < 4)
             {
-                 missingElem = 4 - specialElementsFound ;
+                missingElem = 4 - specialElementsFound;
                 Console.WriteLine("missingElem " + missingElem);
             }
-             
+
+            missingElem = 0;
+
+            if (!upperCharFound)
+            {
+                missingElem++;
+            }
+
+            if (!lowerCharFound)
+            {
+                missingElem++;
+            }
+
+            if (!specialCharFound)
+            {
+                missingElem++;
+            }
+
+            if (!numCharFound)
+            {
+                missingElem++;
+            }
+
             if ( (n + missingElem) >= 6)
             {
-                minNumCharsToAdd = 0;
+                minNumCharsToAdd = missingElem;
             }
             else
             {
                 minNumCharsToAdd =  6 - n;
             }
+            Console.WriteLine(minNumCharsToAdd);
             return minNumCharsToAdd;
-            
 
         }
     }
