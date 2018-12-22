@@ -10,10 +10,11 @@ namespace calcMedianOfNumbersInArray
     {
         static void Main(string[] args)
         {
-            int[] arr = new int[] { 3, 5, 7, 12, 13, 14, 21, 23, 23, 23, 23, 29, 40, 56 };
+            //int[] arr = new int[] { 3, 5, 7, 12, 13, 14, 21, 23, 23, 23, 23, 29, 40, 56 };
 
-            //int[] arr2 = new int[] { };
-            
+            //int[] arr = new int[] { 38, 50, 97, 20 };
+
+            int[] arr = new int[] { 30, 8, 41, 95, -3, 62 };
              Array.Sort(arr);
 
             int median = 0;
