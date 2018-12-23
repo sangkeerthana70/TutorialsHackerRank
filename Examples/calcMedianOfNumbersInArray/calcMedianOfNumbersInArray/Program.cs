@@ -15,18 +15,21 @@ namespace calcMedianOfNumbersInArray
             //int[] arr = new int[] { 38, 50, 97, 20 };
 
             int[] arr = new int[] { 30, 8, 41, 95, -3, 62 };
-             Array.Sort(arr);
+            Array.Sort(arr);
 
-            int median = 0;
+            float median = 0;
             int arrLength =  arr.Length;
             Console.WriteLine("After sorting the elements in arr: ");
-            for(int i = 0; i < arr.Length; i++)
-            {
-                Console.Write("sortedItem: " + arr[i]);
+            //foreach(int sortedItem in arr)
+            //{
+            //    Console.WriteLine("sortedItem : " + sortedItem);
+            //}
+            
+            
+   
                 Console.WriteLine();
 
-                //if length of arr is odd
-                
+                //if length of arr is odd                
                 if (arrLength % 2 != 0)
                 {
                     Console.WriteLine(arr.Length % 2);
@@ -35,19 +38,13 @@ namespace calcMedianOfNumbersInArray
                 }
                 //if length is even
                 else
-                {
-                    
+                {                   
                     Console.WriteLine("Middle element1: " + arr[(arrLength / 2) - 1]);
                     Console.WriteLine("Middle element2: " + arr[arrLength / 2]);
-                    median = (arr[arrLength / 2] + arr[(arrLength / 2) - 1]) / 2;
+                    //cast integer to float as median is of type float
+                    median = (float)(arr[arrLength / 2] + arr[(arrLength / 2) - 1]) / 2;
                     Console.WriteLine("Median: " + median);
                 }
-            }
-            
-             
-
-
-
 
         }
     }
