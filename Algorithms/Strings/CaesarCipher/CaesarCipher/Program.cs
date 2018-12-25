@@ -20,6 +20,9 @@ namespace CaesarCipher
         {
             char ch = ' ';
             int number = 0;
+            int alphaIndex = 0;
+            int result = 0;
+            string cipherString = " ";
             for (int i = 0; i < s.Length; i++)
             {
                 if (char.IsLetter(s[i]))
@@ -29,11 +32,35 @@ namespace CaesarCipher
                     // Console.Write(b.ToString());
                     ch = s[i];
                     number = (int)ch;
-                    Console.WriteLine(number);
+                    Console.WriteLine("Char to int: " + number);
 
+                    if (Char.IsUpper(s[i]))
+                    {
+                        alphaIndex = number - 'A';
+                        Console.WriteLine("alphaIndex: " + alphaIndex);
+                        result = ((alphaIndex + k) % 26) + 'A';
+                        Console.WriteLine("Result: " + result);
+
+                    }
+                    else
+                    {
+                        alphaIndex = number - 'a';
+                        Console.WriteLine("alphaIndex: " + alphaIndex);
+                        result = ((alphaIndex + k) % 26) + 'a';
+                        Console.WriteLine("result: " + result);
+                        ch = (char)result;
+                        Console.WriteLine("char: " + ch);
+                    }
+ 
+                }
+                else
+                {
+                    ch = s[i];
+                    Console.WriteLine(ch);
                 }
             }
-            return "";
+            Console.Write(ch);
+            return cipherString;
 
         }
 
