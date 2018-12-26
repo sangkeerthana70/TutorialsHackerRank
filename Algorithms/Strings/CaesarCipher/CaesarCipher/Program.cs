@@ -13,6 +13,7 @@ namespace CaesarCipher
             string s = "middle - Outz";
             int k = 2;
             string result = caesarCipher(s, k);
+            Console.WriteLine("result : " + result);
         }
 
         // Complete the caesarCipher function below.
@@ -27,9 +28,7 @@ namespace CaesarCipher
             {
                 if (char.IsLetter(s[i]))
                 {
-                    //byte[] asciiBytes = Encoding.ASCII.GetBytes(s[i]);
-                    //foreach (byte b in System.Text.Encoding.UTF8.GetBytes(s.ToCharArray()))
-                    // Console.Write(b.ToString());
+                    
                     ch = s[i];
                     number = (int)ch;
                     Console.WriteLine("Char to int: " + number);
@@ -40,6 +39,9 @@ namespace CaesarCipher
                         Console.WriteLine("alphaIndex: " + alphaIndex);
                         result = ((alphaIndex + k) % 26) + 'A';
                         Console.WriteLine("Result: " + result);
+                        ch = (char)result;
+                        Console.WriteLine("char: " + ch);
+                       
 
                     }
                     else
@@ -50,16 +52,20 @@ namespace CaesarCipher
                         Console.WriteLine("result: " + result);
                         ch = (char)result;
                         Console.WriteLine("char: " + ch);
+                        
                     }
  
                 }
                 else
                 {
                     ch = s[i];
+                    
                     Console.WriteLine(ch);
                 }
             }
-            Console.Write(ch);
+            cipherString += ch.ToString();
+            Console.Write("cipherString: " + cipherString);
+            Console.WriteLine();
             return cipherString;
 
         }
