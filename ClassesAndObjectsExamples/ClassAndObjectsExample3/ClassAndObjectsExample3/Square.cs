@@ -14,14 +14,14 @@ namespace ClassAndObjectsExample3
             this.side = s;
         }
 
-        public int Area(int side)
+        public int Area()
         {
             int area = side * side;
             //Console.WriteLine(area);
             return area;
         }
 
-        public int Perimeter(int side)
+        public int Perimeter()
         {
             int perimeter = side * 4;
             //Console.WriteLine(perimeter);
@@ -30,9 +30,9 @@ namespace ClassAndObjectsExample3
 
         public void About()
         {
-            Console.Write("I am a square ");
-            Console.Write(" With an area of : " + this.Area(side));
-            Console.Write(" And a perimeter of : " + this.Perimeter(side));
+            Console.Write("I am a square with a side of " + this.side);
+            Console.Write(" With an area of : " + this.Area());
+            Console.Write(" And a perimeter of : " + this.Perimeter());
             Console.WriteLine();
 
         }
