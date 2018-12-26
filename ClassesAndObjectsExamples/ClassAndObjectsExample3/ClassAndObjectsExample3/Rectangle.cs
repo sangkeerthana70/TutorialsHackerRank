@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace ClassAndObjectsExample3
 {
-    public class Rectangle
+    public class Rectangle:Shapes
     {
         private int Length;
         private int Width;
-        public Rectangle(int length, int width)
+        public Rectangle(int length, int width): base()
         {
             this.Length = length;
             this.Width = width;

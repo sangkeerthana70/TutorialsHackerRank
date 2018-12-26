@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace ClassAndObjectsExample3
 {
-    public class Square
+    public class Square:Shapes
     {
         private int side;
 
-        public Square(int s){
+        public Square(int s): base()
+        {
             this.side = s;
         }
 
