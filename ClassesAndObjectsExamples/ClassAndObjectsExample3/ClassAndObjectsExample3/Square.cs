@@ -34,6 +34,7 @@ namespace ClassAndObjectsExample3
             Console.Write(" With an area of : " + this.Area());
             Console.Write(" And a perimeter of : " + this.Perimeter());
             Console.WriteLine();
+            Console.WriteLine();
 
         }
     }
