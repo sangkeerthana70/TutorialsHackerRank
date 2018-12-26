@@ -8,20 +8,20 @@ namespace ClassAndObjectsExample3
 {
     public class Square
     {
-        public int side;
+        private int side;
 
         public Square(int s){
             this.side = s;
         }
 
-        public int Area()
+        private int Area()
         {
             int area = side * side;
             //Console.WriteLine(area);
             return area;
         }
 
-        public int Perimeter()
+        private int Perimeter()
         {
             int perimeter = side * 4;
             //Console.WriteLine(perimeter);
