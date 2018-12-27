@@ -29,7 +29,7 @@ namespace ClassAndObjectsExample3
             return perimeter;
         }
 
-        public void About()
+        public override void About()
         {
             Console.Write("I am a square with a side of " + this.side);
             Console.Write(" With an area of : " + this.Area());

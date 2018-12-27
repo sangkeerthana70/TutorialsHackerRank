@@ -28,7 +28,7 @@ namespace ClassAndObjectsExample3
             return area;
         }
 
-        public void About()
+        public override void About()
         {
             Console.Write("I am a rectangle with a length of " + Length );
             Console.Write(" And a width of " + Width);
