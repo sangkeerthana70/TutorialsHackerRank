@@ -47,11 +47,12 @@ namespace ClassAndObjectsExample3
             // Create a new List called Box and add squares and rectangles object in it
 
             List<Shapes> Box = new List<Shapes>();
-
+            // override keyword makes the square class override the base class's About method
             Box.Add(square1);
             Box.Add(square2);
             Box.Add(square3);
 
+            // override keyword makes the rectangle class override the base class's About method
             Box.Add(rectangleA);
             Box.Add(rectangleB);
             Box.Add(rectangleC);
