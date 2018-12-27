@@ -16,6 +16,7 @@ namespace ClassAndObjectsExample3
             Square square2 = new Square(12);
             Square square3 = new Square(4);
 
+
             //List <Square> squares = new List <Square> ();
             //squares.Add(square1);
             //squares.Add(square2);
@@ -29,9 +30,7 @@ namespace ClassAndObjectsExample3
             //instantiate rectangle class into many objects
 
             Rectangle rectangleA = new Rectangle(2, 4);
-            rectangleA.About();
             Rectangle rectangleB = new Rectangle(6, 8);
-            rectangleB.About();
             Rectangle rectangleC = new Rectangle(10, 12);
 
             //List<Rectangle> rectangles = new List<Rectangle>();
@@ -48,6 +47,7 @@ namespace ClassAndObjectsExample3
             // Create a new List called Box and add squares and rectangles object in it
 
             List<Shapes> Box = new List<Shapes>();
+
             Box.Add(square1);
             Box.Add(square2);
             Box.Add(square3);
