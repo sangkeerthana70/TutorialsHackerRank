@@ -13,7 +13,7 @@ namespace ClassAndObjectsExample3
 
         }
 
-        public void About()
+        public virtual void About()
         {
             Console.WriteLine("I am a shape");
         }
