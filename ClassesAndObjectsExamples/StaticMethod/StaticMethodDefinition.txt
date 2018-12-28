@@ -1,0 +1,1 @@
+Static methods and variables can be called directly without having to be instantiated like an instance method or variable.
