@@ -33,7 +33,7 @@ namespace MakigAnagrams
                 Console.WriteLine("Outer loop : " + s1[i]);
                 for (int j = 0; j < s2.Length; j++)
                 {
-                    Console.WriteLine("Inner loop : " + s2[i]);
+                    Console.WriteLine("Inner loop : " + s2[j]);
                     if (s1[i] == s2[j])
                     {
                         Console.WriteLine("match");
@@ -45,7 +45,7 @@ namespace MakigAnagrams
                 if(!match)
                 {
                     misMatchCount += 1;
-                    Console.WriteLine("No match : " + misMatchCount);
+                    Console.WriteLine("misMatchCount : " + misMatchCount);
                 }
 
 
@@ -70,10 +70,11 @@ namespace MakigAnagrams
                 if (!match)
                 {
                     Console.WriteLine("no match");
-                    misMatchCount++;
+                    misMatchCount += 1;
                     Console.WriteLine("mismatchCount " + misMatchCount);
                 }
             }
+            Console.WriteLine("Mis match Letter Count: " + misMatchCount);
             return misMatchCount;
 
 
