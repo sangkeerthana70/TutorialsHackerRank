@@ -37,10 +37,10 @@ namespace AbstractClass
             Console.WriteLine("Number of rectangles constructed through Rectangle object = " + Rectangle.numberOfRectangles);
             Console.WriteLine(rectangleC.ThreeDShape());
 
-            //Circle.Definition();
-            //Circle circle = new Circle(4);
-            //Console.WriteLine("Number of circles constructed through Circle object = "+ Circle.numberOfCircles);
-            //Console.WriteLine(circle.ThreeDShape());
+            Circle.Definition();
+            Circle circle = new Circle(4);
+            Console.WriteLine("Number of circles constructed through Circle object = "+ Circle.numberOfCircles);
+            Console.WriteLine(circle.ThreeDShape());
 
 
             // Create a new List called Box and add squares and rectangles object in it
@@ -56,7 +56,7 @@ namespace AbstractClass
             Box.Add(rectangleB);
             Box.Add(rectangleC);
 
-            //Box.Add(circle);
+            Box.Add(circle);
 
             foreach (Shape item in Box)
             {
