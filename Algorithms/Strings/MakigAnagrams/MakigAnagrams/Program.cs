@@ -10,8 +10,8 @@ namespace MakigAnagrams
     {
         static void Main(string[] args)
         {
-            string s1 = "cde";
-            string s2 = "abc";
+            string s1 = "bacdc";
+            string s2 = "dcbac";
             int result = makingAnagrams(s1, s2);
 
         }
