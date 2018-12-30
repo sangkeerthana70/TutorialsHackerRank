@@ -12,33 +12,33 @@ namespace AbstractClass
         {
             // call the static method Definition inside the Square class without any instantiation
             Square.Definition();
-            Square square1 = new Square(8);
+            Square square1 = new Square(8, "red");
             // call the public static variable inside Square class directly without instantiation
             Console.WriteLine("Number of squares constructed through square object = " + Square.numberOfSquares);
             Console.WriteLine(square1.ThreeDShape()); 
-            Square square2 = new Square(12);
+            Square square2 = new Square(12, "blue");
             Console.WriteLine("Number of squares constructed through square object = " + Square.numberOfSquares);
             Console.WriteLine(square2.ThreeDShape()); 
-            Square square3 = new Square(4);            
+            Square square3 = new Square(4, "green");            
             Console.WriteLine("Number of squares constructed through square object = " + Square.numberOfSquares);
             Console.WriteLine(square3.ThreeDShape());
 
 
             //call the static method Definition inside the Rectangle class without any instantiation
             Rectangle.Definition();
-            Rectangle rectangleA = new Rectangle(2, 4);
+            Rectangle rectangleA = new Rectangle(2, 4, "red");
             // call the public static variable inside Rectangle class directly without instantiation
             Console.WriteLine("Number of rectangles constructed through Rectangle object = " + Rectangle.numberOfRectangles);
             Console.WriteLine(rectangleA.ThreeDShape());
-            Rectangle rectangleB = new Rectangle(6, 8);
+            Rectangle rectangleB = new Rectangle(6, 8, "blue");
             Console.WriteLine("Number of rectangles constructed through Rectangle object = " + Rectangle.numberOfRectangles);
             Console.WriteLine(rectangleB.ThreeDShape());
-            Rectangle rectangleC = new Rectangle(10, 12);
+            Rectangle rectangleC = new Rectangle(10, 12, "green");
             Console.WriteLine("Number of rectangles constructed through Rectangle object = " + Rectangle.numberOfRectangles);
             Console.WriteLine(rectangleC.ThreeDShape());
 
             Circle.Definition();
-            Circle circle = new Circle(4);
+            Circle circle = new Circle(4, "red");
             Console.WriteLine("Number of circles constructed through Circle object = "+ Circle.numberOfCircles);
             Console.WriteLine(circle.ThreeDShape());
 

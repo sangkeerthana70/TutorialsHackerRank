@@ -10,11 +10,13 @@ namespace AbstractClass
     {
         private int side;
         public static int numberOfSquares;
+        public string color;
 
-        public Square(int s) : base()
+        public Square(int s, string c) : base()
         {
             this.side = s;
             numberOfSquares++;
+            this.color = c;
             //Console.WriteLine("Number of Squares = " + numberOfSquares);
         }
 
@@ -37,6 +39,7 @@ namespace AbstractClass
             Console.Write("I am a square with a side of " + this.side);
             Console.Write(" With an area of : " + this.Area());
             Console.Write(" And a perimeter of : " + this.Perimeter());
+            Console.WriteLine(" I am  " + this.color + " in color.");
             Console.WriteLine();
 
         }
