@@ -15,7 +15,7 @@ namespace DictionaryInCSharp
             IDictionary<string, string> d = new Dictionary<string, string>();
 
 
-            // Add some elements to the dictionary. There are no 
+            // Add elements to the dictionary. There are no 
             // duplicate keys, but some of the values are duplicates.
             d.Add("txt", "notepad.exe");
             d.Add("bmp", "paint.exe");
@@ -32,6 +32,17 @@ namespace DictionaryInCSharp
             {
                 Console.WriteLine("An element with Key = \"txt\" already exists.");
             }
+
+            // Access elements in Dictionary using ForLoop
+            for (int i = 0; i < d.Count; i++)
+            {
+                Console.WriteLine("Key: {0}, Value: {1}", d.Keys.ElementAt(i), d[d.Keys.ElementAt(i)]);
+
+            }
+
+            // Access Individual Element in the dictionary
+            Console.WriteLine("For key = \"rtf\", value = {0}.",
+            d["rtf"]);
         }
     }
 
