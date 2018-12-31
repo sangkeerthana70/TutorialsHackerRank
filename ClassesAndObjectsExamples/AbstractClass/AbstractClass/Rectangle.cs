@@ -12,13 +12,13 @@ namespace AbstractClass
         private int Width;
         // a static variable is global for all instances of a class hence it keep track of the numbber of rectangles for each instantiation of the rectangle class
         public static int numberOfRectangles;
-        public string Color;
+        
         public Rectangle(int l, int w, string c) : base()
         {
             Length = l;
             Width = w;
             numberOfRectangles++;
-            Color = c;
+            color = c;
 
             //Console.WriteLine("number of rectangles = " + numberOfRectangles);
         }
@@ -41,7 +41,7 @@ namespace AbstractClass
             Console.Write(" And a width of " + Width);
             Console.Write(" My Perimeter is " + this.Perimeter());
             Console.Write(" My area is " + this.Area());
-            Console.WriteLine(" I am " + this.Color + " in color.");
+            Console.WriteLine(" I am " + this.color + " in color.");
             Console.WriteLine();
         }
 

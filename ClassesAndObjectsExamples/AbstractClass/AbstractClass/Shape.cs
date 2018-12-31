@@ -9,10 +9,11 @@ namespace AbstractClass
     // abstract class will enforce the derived classes to implement the abstract methods inside
     abstract class Shape
     {
-        public Shape()
-        {
+        public string color;
+        //public Shape()
+        //{
 
-        }
+        //}
         public virtual void About()
         {
             Console.WriteLine("I am a shape");

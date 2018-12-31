@@ -10,7 +10,7 @@ namespace AbstractClass
     {
         private int side;
         public static int numberOfSquares;
-        public string color;
+        
 
         public Square(int s, string c) : base()
         {
