@@ -43,6 +43,22 @@ namespace DictionaryInCSharp
             // Access Individual Element in the dictionary
             Console.WriteLine("For key = \"rtf\", value = {0}.",
             d["rtf"]);
+
+            // TryGetValue() method
+            string result;
+            if (d.TryGetValue("cs", out result))
+            {
+                Console.WriteLine(result);
+            }
+            else
+            {
+                Console.WriteLine("Could not find the specified key.");
+            }
+
+            // If a key does not exist, setting the indexer for that key
+            // adds a new key/value pair.
+            d["doc"] = "winword.exe";
+            Console.WriteLine("For key = \"doc\", value = {0}.", d["doc"]);
         }
     }
 
