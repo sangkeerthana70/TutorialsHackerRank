@@ -59,6 +59,19 @@ namespace DictionaryInCSharp
             // adds a new key/value pair.
             d["doc"] = "winword.exe";
             Console.WriteLine("For key = \"doc\", value = {0}.", d["doc"]);
+
+            // Before adding a KeyValuePair into a dictionary, check that the key does not exist 
+            //using the ContainsKey() method.
+
+            Console.WriteLine(d.ContainsKey("bmp")); // returns true
+            Console.WriteLine(d.ContainsKey("sql")); // returns false
+            Console.WriteLine(d.Contains(new KeyValuePair<string, string>("doc", "winword.exe"))); // returns true
+
+            // Remove elements from Dictionary
+            d.Remove("dib");
+
+            // removes nothing because value  "wordpad.exe" is not matching
+            d.Remove(new KeyValuePair<string, string>("rtf", "wordpad.exe3"));
         }
     }
 
