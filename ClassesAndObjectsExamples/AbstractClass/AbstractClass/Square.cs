@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace AbstractClass
 {
-    class Square : Shape
+    class Square : Shape , RotateObject
     {
+
         private int side;
         public static int numberOfSquares;
         
@@ -52,6 +53,12 @@ namespace AbstractClass
         public override string ThreeDShape()
         {
             return "Cube";
+        }
+
+        public string Rotates()
+        {
+            Console.WriteLine();
+            return "I am a Diamond";
         }
     }
 }

@@ -18,14 +18,18 @@ namespace AbstractClass
             Console.WriteLine(square1.ThreeDShape());
             Console.WriteLine("square1.Color " + square1.color);
             Program.Sort(square1);
+            //implement the interface method Rotates()
+            Console.WriteLine("Calling inteface method Rotates: " + square1.Rotates());
             Square square2 = new Square(12, "blue");
             Console.WriteLine("Number of squares constructed through square object = " + Square.numberOfSquares);
             Console.WriteLine(square2.ThreeDShape());
             Sort(square2);
+            Console.WriteLine("Calling inteface method Rotates: " + square2.Rotates());
             Square square3 = new Square(4, "green");            
             Console.WriteLine("Number of squares constructed through square object = " + Square.numberOfSquares);
             Console.WriteLine(square3.ThreeDShape());
             Program.Sort(square3);
+            Console.WriteLine("Calling inteface method Rotates: " + square3.Rotates());
 
 
             //call the static method Definition inside the Rectangle class without any instantiation
