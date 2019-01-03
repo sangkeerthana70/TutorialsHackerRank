@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddTwoConsecutiveNumberInArray", "AddTwoConsecutiveNumberInArray\AddTwoConsecutiveNumberInArray.csproj", "{DB3B14DC-FCC0-427D-8411-F844272A1F0D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB3B14DC-FCC0-427D-8411-F844272A1F0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB3B14DC-FCC0-427D-8411-F844272A1F0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB3B14DC-FCC0-427D-8411-F844272A1F0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB3B14DC-FCC0-427D-8411-F844272A1F0D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ED517E0A-EBB9-47D7-A508-467C60CF60BC}
+	EndGlobalSection
+EndGlobal
