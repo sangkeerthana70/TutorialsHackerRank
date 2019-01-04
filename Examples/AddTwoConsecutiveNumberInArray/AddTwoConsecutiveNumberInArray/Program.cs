@@ -21,26 +21,25 @@ namespace AddTwoConsecutiveNumberInArray
 
         public static int[] SumTwoConsecutiveNumsInArr(int [] arr1)
         {
-            int[] arr2 = new int[] { };
+            int[] arr2 = new int[arr1.Length];
             int sumTwoNums = 0;
             for (int i = 0; i < arr1.Length; i++)
             {
-                if (arr1[i] == arr1.Length - 1)
+                // check last element in the arr1
+                if (i == arr1.Length - 1)
                 {
-                    sumTwoNums = arr1[i];
+                    sumTwoNums = arr1[i] + arr1[0];
                     Console.WriteLine("sum " + sumTwoNums);
+
                 }
-                //if(arr1[i] == arr1.Length)
-                //{
-                //    sumTwoNums = arr1[0] + arr1[i];
-                //}
+                
                 else
                 {
                     sumTwoNums = arr1[i] + arr1[i + 1];
                     Console.WriteLine("sum " + sumTwoNums);
 
                 }
-                //arr2[i] = (sumTwoNums);
+                arr2[i] = (sumTwoNums);
 
             }
             return arr2;
