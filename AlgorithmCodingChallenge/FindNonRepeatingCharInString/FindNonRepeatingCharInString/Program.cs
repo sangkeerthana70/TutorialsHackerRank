@@ -18,11 +18,13 @@ namespace FindNonRepeatingCharInString
 
         }
 
-        
-
-
+        //1-Find the First non-repeating character in a string.
+        //2-Given a string = "abcabd" return c as a first non repeating char.
+        //3- additional challenge
+        //Memory , variables and efficiency(MVP)Minimal viable product.Brute Force solution
         public static char FindNonRepeatChar(string s)
         {
+            // resetting seen to false for every char
             char letter;
             bool seen;
             for (int i = 0; i < s.Length; i++)
