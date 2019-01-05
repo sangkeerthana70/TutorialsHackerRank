@@ -10,12 +10,12 @@ namespace stringChallenge2
     {
         static void Main(string[] args)
         {
-            string a = "bear";
-            //string b = "that";
+            string a = "bear";         
             string b = "this";
             int length = 4;
-            
-
+            // Function to compare characters in two strings and return the difference between the two character
+            //in each string or in other words the number of steps each character must take to become the character of the other string.
+            // Eg:ascii value of i in second string 'this' is 8 steps away from a in first string 'bear' which is 105 - 97
             int[] result = FindDifferenceBetweenTwoStrings(a, b, length);
 
         }
@@ -31,15 +31,12 @@ namespace stringChallenge2
                 //Console.WriteLine("b[j] " + b[i]);
                 if(a[i] == b[i])
                 {
-                    difference = 0;
-                    //Console.WriteLine("difference " + difference);
+                    difference = 0;                   
                     arr[i] = difference;
 
                 }
                 else
-                {
-                    //Console.WriteLine("a[i] " + a[i]);
-                    //Console.WriteLine("b[j] " + b[i]);
+                {                   
                     int castCharOfa = (int)a[i];
                     //Console.WriteLine("cast a " + a[i] + castCharOfa);
                     int castCharOfb = (int)b[i];
