@@ -10,8 +10,9 @@ namespace stringChallenge2
     {
         static void Main(string[] args)
         {
-            string a = "this";
-            string b = "that";
+            string a = "bear";
+            //string b = "that";
+            string b = "this";
             int length = 4;
             
 
@@ -25,8 +26,8 @@ namespace stringChallenge2
             int difference;
             for(int i = 0; i < length; i++)
             {
-                //Console.WriteLine("a[i] " + a[i]);
-                //Console.WriteLine("b[j] " + b[i]);
+                Console.WriteLine("a[i] " + a[i]);
+                Console.WriteLine("b[j] " + b[i]);
                 if(a[i] == b[i])
                 {
                     difference = 0;
@@ -36,8 +37,8 @@ namespace stringChallenge2
                 }
                 else
                 {
-                    //Console.WriteLine("a[i] " + a[i]);
-                    //Console.WriteLine("b[j] " + b[i]);
+                    Console.WriteLine("a[i] " + a[i]);
+                    Console.WriteLine("b[j] " + b[i]);
                     int castCharOfa = (int)a[i];
                     Console.WriteLine("cast a " + a[i] + castCharOfa);
                     int castCharOfb = (int)b[i];
