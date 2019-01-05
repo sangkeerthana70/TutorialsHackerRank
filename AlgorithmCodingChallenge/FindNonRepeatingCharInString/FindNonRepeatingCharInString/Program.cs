@@ -11,7 +11,8 @@ namespace FindNonRepeatingCharInString
         static void Main(string[] args)
         {
 
-            string s = "abcabd";
+            //string s = "abcabd";
+            string s = "abadababacab";
 
             char result = FindNonRepeatChar(s);
             Console.WriteLine("result " + result);
