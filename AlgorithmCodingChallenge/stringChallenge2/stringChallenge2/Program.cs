@@ -24,6 +24,7 @@ namespace stringChallenge2
         {
             int[] arr = new int[length];
             int difference;
+            int totChangeScore = 0;
             for(int i = 0; i < length; i++)
             {
                 Console.WriteLine("a[i] " + a[i]);
@@ -45,14 +46,16 @@ namespace stringChallenge2
                     Console.WriteLine(("cast b " + b[i] + castCharOfb));
                     difference = castCharOfb - castCharOfa;
                     Console.WriteLine("difference " + difference);
+                    totChangeScore += difference;
                     arr[i] = difference;
+                    
                 }
             }
             //foreach(int item in arr)
             //{
             //    Console.Write(item + " ");
             //}
-
+            Console.WriteLine("total change score " + totChangeScore);
             Console.WriteLine(string.Join(" ", arr));
             return arr;
 
