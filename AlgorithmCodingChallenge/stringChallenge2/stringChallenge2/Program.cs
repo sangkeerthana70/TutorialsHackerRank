@@ -27,25 +27,25 @@ namespace stringChallenge2
             int totChangeScore = 0;
             for(int i = 0; i < length; i++)
             {
-                Console.WriteLine("a[i] " + a[i]);
-                Console.WriteLine("b[j] " + b[i]);
+                //Console.WriteLine("a[i] " + a[i]);
+                //Console.WriteLine("b[j] " + b[i]);
                 if(a[i] == b[i])
                 {
                     difference = 0;
-                    Console.WriteLine("difference " + difference);
+                    //Console.WriteLine("difference " + difference);
                     arr[i] = difference;
 
                 }
                 else
                 {
-                    Console.WriteLine("a[i] " + a[i]);
-                    Console.WriteLine("b[j] " + b[i]);
+                    //Console.WriteLine("a[i] " + a[i]);
+                    //Console.WriteLine("b[j] " + b[i]);
                     int castCharOfa = (int)a[i];
-                    Console.WriteLine("cast a " + a[i] + castCharOfa);
+                    //Console.WriteLine("cast a " + a[i] + castCharOfa);
                     int castCharOfb = (int)b[i];
-                    Console.WriteLine(("cast b " + b[i] + castCharOfb));
+                    //Console.WriteLine(("cast b " + b[i] + castCharOfb));
                     difference = castCharOfb - castCharOfa;
-                    Console.WriteLine("difference " + difference);
+                    //Console.WriteLine("difference " + difference);
                     totChangeScore += difference;
                     arr[i] = difference;
                     
