@@ -16,7 +16,7 @@ namespace stringChallenge2
             
 
             int[] result = FindDifferenceBetweenTwoStrings(a, b, length);
-            Console.WriteLine("result " + result);
+
         }
 
         public static int[] FindDifferenceBetweenTwoStrings(string a, string b, int length)
@@ -25,8 +25,8 @@ namespace stringChallenge2
             int difference;
             for(int i = 0; i < length; i++)
             {
-                Console.WriteLine("a[i] " + a[i]);
-                Console.WriteLine("b[j] " + b[i]);
+                //Console.WriteLine("a[i] " + a[i]);
+                //Console.WriteLine("b[j] " + b[i]);
                 if(a[i] == b[i])
                 {
                     difference = 0;
@@ -36,8 +36,8 @@ namespace stringChallenge2
                 }
                 else
                 {
-                    Console.WriteLine("a[i] " + a[i]);
-                    Console.WriteLine("b[j] " + b[i]);
+                    //Console.WriteLine("a[i] " + a[i]);
+                    //Console.WriteLine("b[j] " + b[i]);
                     int castCharOfa = (int)a[i];
                     Console.WriteLine("cast a " + a[i] + castCharOfa);
                     int castCharOfb = (int)b[i];
@@ -47,6 +47,12 @@ namespace stringChallenge2
                     arr[i] = difference;
                 }
             }
+            //foreach(int item in arr)
+            //{
+            //    Console.Write(item + " ");
+            //}
+
+            Console.WriteLine(string.Join(" ", arr));
             return arr;
 
         }
