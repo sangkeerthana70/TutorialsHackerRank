@@ -22,16 +22,7 @@ namespace TwoCharacters
         // Complete the alternate function below.
         static int alternate(string s)
         {
-            string combination;
-            string newStr = "";
-            for (int i = 0; i < s.Length; i++)
-            {
-                
-                
-                
-
-            }
-            //Console.WriteLine("combination " + newStr);
+            
             return 0;
         }
 
@@ -41,7 +32,7 @@ namespace TwoCharacters
             string newString = "";
             string modifiedString = "";
             for (int i = 0; i < s.Length; i++)
-            {
+            {               
                 if (i == s.Length - 1)
                 {
                     break;
@@ -51,28 +42,27 @@ namespace TwoCharacters
                 {
                     if (s[i] == s[i + 1])
                     {
-                        Console.WriteLine("same character");
-                        Console.WriteLine("s[i] " + s[i]);
-                        Console.WriteLine("s[i + 1] " + s[i + 1]);
-                        newString = System.Convert.ToString(s[i]) + System.Convert.ToString(s[i + 1]); ; 
-                        Console.WriteLine("new string " + newString);
+                        //Console.WriteLine("same character");
+                        //Console.WriteLine("s[i] " + s[i]);
+                        //Console.WriteLine("s[i + 1] " + s[i + 1]);
+                        newString = System.Convert.ToString(s[i]) + System.Convert.ToString(s[i + 1]);
+                        //Console.WriteLine("new string " + newString);
                          s = s.Replace(newString, "");
-
                         Console.WriteLine(" s after removing same characters " + s);
-                        
-
+ 
                         if (s.Length == 0)
-                        {
-                            
-                            s = "Empty String";
-                            
+                        {                           
+                            s = "Empty String";                           
                         }
                     }
-
+                    else
+                    {
+                        Console.WriteLine("Different character");
+                        Console.WriteLine("s[i] " + s[i]);
+                        Console.WriteLine("s[i + 1] " + s[i + 1]);
+                    }
                 }
-                i++;
-
-
+                //i++;
             }
             Console.WriteLine(s);
             return s;
