@@ -10,11 +10,12 @@ namespace TwoCharacters
     {
         static void Main(string[] args)
         {
-            //int length = 10;
+ 
             //string s = "beabeefeab";
             //int result = alternate(s);
 
-            string s = "aaabccddd";
+            //string s = "aaabccddd";
+            string s = "baab";
             string result1 = superReducedString(s);
 
         }
@@ -29,8 +30,8 @@ namespace TwoCharacters
         // Complete the superReducedString function below.
         static string superReducedString(string s)
         {
-            string newString = "";
-            string modifiedString = "";
+            string reducedString = "";
+            
             for (int i = 0; i < s.Length; i++)
             {               
                 if (i == s.Length - 1)
@@ -42,27 +43,22 @@ namespace TwoCharacters
                 {
                     if (s[i] == s[i + 1])
                     {
-                        //Console.WriteLine("same character");
+                        Console.WriteLine("same character");
                         //Console.WriteLine("s[i] " + s[i]);
                         //Console.WriteLine("s[i + 1] " + s[i + 1]);
-                        newString = System.Convert.ToString(s[i]) + System.Convert.ToString(s[i + 1]);
+                        reducedString = System.Convert.ToString(s[i]) + System.Convert.ToString(s[i + 1]);
                         //Console.WriteLine("new string " + newString);
-                         s = s.Replace(newString, "");
-                        Console.WriteLine(" s after removing same characters " + s);
- 
+                         s = s.Replace(reducedString, "");
+                        Console.WriteLine("Reduced string after removing same characters " + s);
+                        
                         if (s.Length == 0)
                         {                           
                             s = "Empty String";                           
                         }
                     }
-                    else
-                    {
-                        Console.WriteLine("Different character");
-                        Console.WriteLine("s[i] " + s[i]);
-                        Console.WriteLine("s[i + 1] " + s[i + 1]);
-                    }
+                    
                 }
-                //i++;
+              
             }
             Console.WriteLine(s);
             return s;
