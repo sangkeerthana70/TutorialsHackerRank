@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DisplayBoard
+namespace DrawBoard
 {
     class Program
     {
@@ -24,16 +24,17 @@ namespace DisplayBoard
             for(int i = 0; i < rows; i++)
             {
                 Console.Write(" "); 
-                Console.WriteLine("| |");
+                Console.WriteLine("| |" + " ");
+                
                 for(int j = 0; j < rows - 1; j++)
                 {
-                    //Console.WriteLine();
+                    
                     Console.WriteLine("-+-+-");
                 }
                 
 
             }
-            
+            // print the last row out of the loop
             Console.WriteLine(" | | ");
 
 
