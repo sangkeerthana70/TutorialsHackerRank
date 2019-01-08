@@ -7,23 +7,35 @@ using System.Threading.Tasks;
 namespace DisplayBoard
 {
     public class PrintTicTacToeApproach2
-    {       
-        int rows;
-        int columns;
-        public PrintTicTacToeApproach2(int r, int c)
+    {
+        int height;
+        public PrintTicTacToeApproach2(int h)
         {
-            this.rows = r;
-            this.columns = c;
+            this.height = h;
         }
 
 
-        public void printRows()
-        {       
-                Console.WriteLine(" | | ");
-        }
-        public void printColumns()
+        public void DrawTicTacToeBoard( int height)
         {
-                Console.WriteLine("-+-+-");
+             
+            for (int i = 0; i < height; i++)
+            {
+                if (i % 2 == 0)
+                {                   
+                    for (int j = 0; j < height; j++)
+                    {
+                        Console.Write(" | ");
+                    }
+                }
+                else
+                {                  
+                    for (int k = 0; k < height; k++)
+                    {
+                        Console.Write("-+-");
+                    }
+                }
+                Console.WriteLine();
+            }
         }
     }
 }

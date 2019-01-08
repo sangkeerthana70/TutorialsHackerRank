@@ -19,8 +19,9 @@ namespace DrawBoard
             //     Console.WriteLine("-+-+-");
             //}
 
-
+            /*
             // Program to print 5 rows and 5 columns of tic-tac-toe board
+            Console.WriteLine("Simple 5X5 tictac toe board");
             int rows = 2;
             for(int i = 0; i < rows; i++)
             {
@@ -35,22 +36,16 @@ namespace DrawBoard
             }
             // print the last row out of the loop
             Console.WriteLine("o|x|o");
-
-           
-            //PrintTicTacToeBoard();
-
+            */
+            Console.WriteLine();
+            Console.WriteLine("Print 5x5 board by calling a static function PrintTicTacToeBoard()");            
+            PrintTicTacToeBoard();        
             // call the Approach2 class
-            PrintTicTacToeApproach2 method2 = new PrintTicTacToeApproach2(3, 3);
-            for(int i = 0; i < 2; i++)
-            {
-                method2.printRows();
-                for(int j = 0; j < 2 - 1; j++)
-                {
-                    method2.printColumns();
-                }
-                
-            }
-            Console.WriteLine(" | | ");
+            Console.WriteLine();
+            PrintTicTacToeApproach2 method2 = new PrintTicTacToeApproach2(5);
+            Console.WriteLine("Call class ");
+            method2.DrawTicTacToeBoard(11);
+            Console.WriteLine();
 
 
         }
@@ -58,20 +53,27 @@ namespace DrawBoard
         public static void PrintTicTacToeBoard()
         {
             Console.WriteLine();
-            int height = 2;
+            int height = 5;
             for(int i = 0; i < height; i++)
             {
-                
-                Console.WriteLine("o|x|o");
-                for (int j = 0; j < height - 1; j++)
+                if(i == 2)
                 {
-                    Console.WriteLine("-+-+-");
-
-
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine(" | | ");
+                }
+                
+                
+                for (int j = 0; j < height - 4; j++)
+                {                   
+                        Console.WriteLine("-+-+-");
                 }
                
             }
-            Console.WriteLine("o|x|o");
+            // print the last row out of the loop
+            Console.WriteLine(" | | ");
 
         }
 
