@@ -55,15 +55,11 @@ namespace TwoCharacters
                         {                           
                             s = "Empty String";                           
                         }
-                    }
-                    
-                }
-              
+                    }                   
+                }              
             }
             Console.WriteLine(s);
             return s;
-
-
         }
 
     }
