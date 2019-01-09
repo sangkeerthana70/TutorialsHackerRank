@@ -12,12 +12,19 @@ namespace ArrayCopyFunction
         {
             // Program to copy elements from one array into another array
             int[] arr1 = new int[] {7, 2, 5, 9, 11 };
+            int[] arr2Result = CopyArrayIntoANother(arr1);
+            
+        }
+
+        public static int[] CopyArrayIntoANother(int [] arr)
+        {
             int[] arr2 = new int[5];
-            for (int i = 0; i < arr1.Length; i++)
+            for (int i = 0; i < arr.Length; i++)
             {
-                arr2[i] = arr1[i];
+                arr2[i] = arr[i];
                 Console.WriteLine("arr2[i] : " + arr2[i]);
             }
+            return arr2;
         }
     }
 }
