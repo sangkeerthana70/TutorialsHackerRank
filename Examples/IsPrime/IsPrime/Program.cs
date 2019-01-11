@@ -12,21 +12,25 @@ namespace IsPrime
         {
             bool result = IsPrime(7);
             Console.WriteLine(result);
+
+            int[] factors = GetFactors(12);
+
+           
         }
          
         static bool IsPrime(int num)
         {
             // find if a number is prime
-            // a number is prime if it is divisible by only itself and one then it is prime
+            // a number is prime if it is divisible by only itself and one
            
-            //set i = 2 since all numbers are divisible by 1
+            // Initialize i = 2 since all numbers are divisible by 1
             for( int i = 2; i < num; i++)
             {
                 Console.WriteLine("Loop count: " + i);
                 if (num % i == 0)
                 {
                     Console.WriteLine(i + " is not prime");
-                    return false;
+                    return false;//return false once the number is divisible by any other number other than 1 and itself
                 }
                 else
                 {
@@ -36,6 +40,23 @@ namespace IsPrime
             return true;
             
         }
+
+        // Factors are what we can multiply to get the number
+        static int [] GetFactors(int num)
+        {
+            int[] factors = new int[] { };
+
+            for(int i = 1; i < num; i++)
+            {
+                if(num % i == 0)
+                {
+                    factors[i] = i;
+                    Console.WriteLine("factors[i] is" + factors[i]);
+                }
+            }
+            return factors;
+
+        }
         
-}
+    }
 }
