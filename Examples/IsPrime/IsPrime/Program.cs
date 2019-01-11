@@ -44,9 +44,9 @@ namespace IsPrime
         // Factors are what we can multiply to get the number
         static int [] GetFactors(int num)
         {
-            int[] factors = new int[7];
+            int[] factors = new int[num + 1];
 
-            for(int i = 1; i < num; i++)
+            for(int i = 1; i <= num; i++)
             {
                 if(num % i == 0)
                 {
