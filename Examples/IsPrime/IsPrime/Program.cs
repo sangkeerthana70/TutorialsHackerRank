@@ -10,8 +10,8 @@ namespace IsPrime
     {
         static void Main(string[] args)
         {
-            bool result = IsPrime(7);
-            Console.WriteLine(result);
+            //bool result = IsPrime(7);
+            //Console.WriteLine(result);
 
             int[] factors = GetFactors(12);
 
@@ -44,15 +44,21 @@ namespace IsPrime
         // Factors are what we can multiply to get the number
         static int [] GetFactors(int num)
         {
-            int[] factors = new int[] { };
+            int[] factors = new int[7];
 
             for(int i = 1; i < num; i++)
             {
                 if(num % i == 0)
                 {
+                    Console.WriteLine("Loop : " + i);
+                    Console.WriteLine(num + " % " + i + " == 0");
                     factors[i] = i;
-                    Console.WriteLine("factors[i] is" + factors[i]);
+                    
                 }
+            }
+            foreach(int number in factors)
+            {
+                Console.WriteLine("Num : " + number);
             }
             return factors;
 
