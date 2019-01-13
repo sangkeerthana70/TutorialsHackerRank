@@ -15,6 +15,8 @@ namespace IsPrime
 
             int[] factors = GetFactors(12);
 
+            int result = SumEvenNumsInRange(10, 20);
+            Console.WriteLine(result);
            
         }
          
@@ -26,7 +28,7 @@ namespace IsPrime
             // Initialize i = 2 since all numbers are divisible by 1
             for( int i = 2; i < num; i++)
             {
-                Console.WriteLine("Loop count: " + i);
+                //Console.WriteLine("Loop count: " + i);
                 if (num % i == 0)
                 {
                     Console.WriteLine(i + " is not prime");
@@ -34,7 +36,7 @@ namespace IsPrime
                 }
                 else
                 {
-                    Console.WriteLine(num + " mod " + i + " is not zero");
+                    //Console.WriteLine(num + " mod " + i + " is not zero");
                 }
             }
             return true;
@@ -51,7 +53,7 @@ namespace IsPrime
                 if(num % i == 0)
                 {
                     Console.WriteLine("Loop : " + i);
-                    Console.WriteLine(num + " % " + i + " == 0");
+                    //Console.WriteLine(num + " % " + i + " == 0");
                     factors[i] = i;
                     
                 }
@@ -69,7 +71,7 @@ namespace IsPrime
             var result = 0;
             for (var i = num1; i <= num2; i++)
             {
-                if (isOdd(i))
+                if (IsPrime(i))
                 {
                     Console.WriteLine(i);
                     result = result + i;
@@ -78,6 +80,18 @@ namespace IsPrime
             }
             return result;
         }
+
+        //static bool IsOdd(int num)
+        //{
+        //    if (num % 2 != 0)
+        //    {
+        //        return true;
+        //    }
+        //    else
+        //    {
+        //        return false;
+        //    }
+        //}
         
     }
 }
