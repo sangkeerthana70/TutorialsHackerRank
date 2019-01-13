@@ -11,73 +11,66 @@ namespace DrawBoard
     {
         static void Main(string[] args)
         {
-
-            //for(int i = 0; i < 3; i++)
-            //{
-            //     Console.Write(" ");
-            //     Console.WriteLine("| |");
-            //     Console.WriteLine("-+-+-");
-            //}
-
-            
-            // Program to print 5 rows and 5 columns of tic-tac-toe board
-            Console.WriteLine("Simple 5X5 tictac toe board");
-            int rows = 2;
-            for(int i = 0; i < rows; i++)
-            {
-                Console.Write("o"); 
-                Console.WriteLine("|x|" + "o");
-                
-                for(int j = 0; j < rows - 1; j++)
-                {
-                    
-                    Console.WriteLine("-+-+-");
-                }
-            }
-            // print the last row out of the loop
-            Console.WriteLine("o|x|o");
-            
-            Console.WriteLine();
-            Console.WriteLine("Print 5x5 board by calling a static function PrintTicTacToeBoard()");            
-            PrintTicTacToeBoard();        
-            // call the Approach2 class
-            Console.WriteLine();
-            PrintTicTacToeApproach2 method2 = new PrintTicTacToeApproach2(5);
-            Console.WriteLine("Call class ");
-            method2.DrawTicTacToeBoard(15);
-            Console.WriteLine();
-
-
+            DrawBoard(4);
         }
 
-        public static void PrintTicTacToeBoard()
+        public static void DrawBoard(int height)
         {
-            Console.WriteLine();
-            int height = 5;
-            for(int i = 0; i < height; i++)
+            int n = (2 * height) - 1;
+            for (int i = 0; i < n; i++)
             {
-                if(i == 2)
+                if (i % 2 == 0)
                 {
-                    break;
+                    DrawBox(height);
                 }
                 else
                 {
-                    Console.WriteLine(" | | ");
+                    DrawSeparator(height);
                 }
-                
-                
-                for (int j = 0; j < height - 4; j++)
-                {                   
-                        Console.WriteLine("-+-+-");
-                }
-               
             }
-            // print the last row out of the loop
-            Console.WriteLine(" | | ");
+            
+        }
+        
+        //prints first line accross as " |" for the specified height
+        public static void DrawBox(int height)
+        {
+            int n = (2 * height) - 1;
+            for (int i = 0; i < n; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    Console.Write(" ");
+                }
+                else
+                {
+                    Console.Write("|");
+                }
 
+            }
+            Console.WriteLine();
+        }
+        // prints second line accross as "-+" for the specified height
+        public static void DrawSeparator(int height)
+        {
+            int n = (2 * height) - 1;
+            for( int j = 0; j < n; j++)
+            {
+                if (j % 2 == 0)
+                {
+                    Console.Write("-");
+                }
+                else
+                {
+                    Console.Write("+");
+                }
+
+
+            }
+            Console.WriteLine();
         }
 
-        
-        
+
+
+
     }
 }
