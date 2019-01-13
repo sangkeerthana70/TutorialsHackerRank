@@ -24,7 +24,8 @@ namespace DisplayBoard
                 {                   
                     for (int j = 0; j < height; j++)
                     {
-                        Console.Write(" | ");
+                        Console.Write("o| ");
+                        
                     }
                 }
                 else

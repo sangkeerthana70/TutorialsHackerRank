@@ -19,7 +19,7 @@ namespace DrawBoard
             //     Console.WriteLine("-+-+-");
             //}
 
-            /*
+            
             // Program to print 5 rows and 5 columns of tic-tac-toe board
             Console.WriteLine("Simple 5X5 tictac toe board");
             int rows = 2;
@@ -36,7 +36,7 @@ namespace DrawBoard
             }
             // print the last row out of the loop
             Console.WriteLine("o|x|o");
-            */
+            
             Console.WriteLine();
             Console.WriteLine("Print 5x5 board by calling a static function PrintTicTacToeBoard()");            
             PrintTicTacToeBoard();        
@@ -44,7 +44,7 @@ namespace DrawBoard
             Console.WriteLine();
             PrintTicTacToeApproach2 method2 = new PrintTicTacToeApproach2(5);
             Console.WriteLine("Call class ");
-            method2.DrawTicTacToeBoard(11);
+            method2.DrawTicTacToeBoard(15);
             Console.WriteLine();
 
 
