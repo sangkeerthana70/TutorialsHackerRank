@@ -63,6 +63,21 @@ namespace IsPrime
             return factors;
 
         }
+
+        static int SumEvenNumsInRange(int num)
+        {
+            var result = 0;
+            for (var i = num1; i <= num2; i++)
+            {
+                if (isOdd(i))
+                {
+                    console.log(i);
+                    result = result + i;
+                    //console.log(result);
+                }
+            }
+            return result;
+        }
         
     }
 }
