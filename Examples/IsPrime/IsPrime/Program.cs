@@ -10,13 +10,13 @@ namespace IsPrime
     {
         static void Main(string[] args)
         {
-            //bool result = IsPrime(7);
-            //Console.WriteLine(result);
+            bool result = IsPrime(7);
+            Console.WriteLine(result);
 
             int[] factors = GetFactors(12);
 
-            int result = SumEvenNumsInRange(10, 20);
-            Console.WriteLine(result);
+            int result1 = SumEvenNumsInRange(10, 20);
+            Console.WriteLine(result1);
            
         }
          
@@ -71,13 +71,14 @@ namespace IsPrime
             var result = 0;
             for (var i = num1; i <= num2; i++)
             {
-                if (IsPrime(i))
+                if(i % 2 == 0)
                 {
                     Console.WriteLine(i);
                     result = result + i;
-                    Console.WriteLine(result);
+                   
                 }
             }
+            Console.WriteLine(result);
             return result;
         }
 
