@@ -64,16 +64,16 @@ namespace IsPrime
 
         }
 
-        static int SumEvenNumsInRange(int num)
+        static int SumEvenNumsInRange(int num1, int num2)
         {
             var result = 0;
             for (var i = num1; i <= num2; i++)
             {
                 if (isOdd(i))
                 {
-                    console.log(i);
+                    Console.WriteLine(i);
                     result = result + i;
-                    //console.log(result);
+                    Console.WriteLine(result);
                 }
             }
             return result;
