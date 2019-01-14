@@ -11,46 +11,57 @@ namespace SuperReducedString
         static void Main(string[] args)
         {
             //string s = "aaabccddd";
-            string s = "baab";
+            //string s = "baab";
+            string s = "aa";
             string result1 = superReducedString(s);
         }
 
         // Complete the superReducedString function below.
         static string superReducedString(string s)
         {
-            string reducedString = "";
+            string newString = "";
             bool seen = false;
 
-
-            for (int i = 0; i < s.Length; i++)
+            // add a while loop to check the final reduced string for same characters
+            while (true)
             {
-                if (i == s.Length - 1)
+                seen = false;
+                for (int i = 0; i < s.Length; i++)
+                {
+                    //Console.WriteLine("Loop count: " + i);
+                    //Console.WriteLine("length - 1 is " + (s.Length - 1));
+                    if (i == s.Length - 1)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        if (s[i] == s[i + 1])
+                        {
+                            seen = true;
+                            newString = System.Convert.ToString(s[i]) + System.Convert.ToString(s[i + 1]);
+                            s = s.Replace(newString, "");
+                            //s = s.Replace(newString, "");
+                            if (s.Length == 0)
+                            {
+                                s = "Empty String";
+                            }
+                        }
+
+                    }
+
+                }
+                if (!seen)
                 {
                     break;
-
                 }
-                else
-                {
-                    if (s[i] == s[i + 1])
-                    {
-                        Console.WriteLine("same character");
-                        //Console.WriteLine("s[i] " + s[i]);
-                        //Console.WriteLine("s[i + 1] " + s[i + 1]);
-                        reducedString = System.Convert.ToString(s[i]) + System.Convert.ToString(s[i + 1]);
-                        //Console.WriteLine("new string " + newString);
-                        s = s.Replace(reducedString, "");
-                        Console.WriteLine("Reduced string after removing same characters " + s);
 
-                        if (s.Length == 0)
-                        {
-                            s = "Empty String";
-                        }
-                    }
-                }
             }
+
             Console.WriteLine(s);
             return s;
         }
-
     }
+
 }
+
