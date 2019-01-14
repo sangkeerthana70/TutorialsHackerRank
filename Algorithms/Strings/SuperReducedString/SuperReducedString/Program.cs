@@ -12,7 +12,8 @@ namespace SuperReducedString
         {
             //string s = "aaabccddd";
             //string s = "baab";
-            string s = "aa";
+            //string s = "aa";
+            string s = "mellow";
             string result1 = superReducedString(s);
         }
 
