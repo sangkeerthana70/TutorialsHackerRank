@@ -10,7 +10,7 @@ namespace StairCase
     {
         static void Main(string[] args)
         {
-            int sizeOfStairCase = 6;
+            int sizeOfStairCase = 25;
             staircase(sizeOfStairCase);
         }
 
