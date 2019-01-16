@@ -11,7 +11,8 @@ namespace LongestWordInString
        
         static void Main(string[] args)
         {
-            string s = "The quick brown fox jumped over the lazy dog";
+            //string s = "The quick brown fox jumped over the lazy dog";
+            string s = "Six thick thistle sticks";
             string longestWord = FindLongestWord(s);
 
         }
