@@ -12,13 +12,15 @@ namespace LongestWordInString
         static void Main(string[] args)
         {
             //string s = "The quick brown fox jumped over the lazy dog";
-            string s = "Six thick thistle sticks";
+            //string s = "Six thick thistle sticks";
+            string s = "What if we try a super-long word such as otorhinolaryngology";
             string longestWord = FindLongestWord(s);
 
         }
 
         public static string FindLongestWord(string s)
         {
+            //split string and store in in a string array
             string[] strSplit = s.Split(' ');
             string currWord;
             int currLength;
