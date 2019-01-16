@@ -10,9 +10,9 @@ namespace BirthdayChocalate
     {
         static void Main(string[] args)
         {
-            List<int> s = new List<int>() { 1, 2, 1, 3, 2 };
-            int d = 3;//date of birthday
-            int m = 2;//month
+            List<int> s = new List<int>() { 4 };
+            int d = 4;//date of birthday
+            int m = 1;//month
             int result = birthday(s, d, m);
 
             //List<int> s = new List<int>() { 4 };
@@ -23,46 +23,34 @@ namespace BirthdayChocalate
         // Complete the birthday function below.
         static int birthday(List<int> s, int d, int m)
         {
-            
+            int checkSumLength = 0;
             int noOfPortions = 0;
             //Console.WriteLine("List count: " + s.Count);
             
-            for (int i = 0; i < s.Count; i++)
+            for (int i = 0; i < s.Count - 1; i++)
             {
-                Console.WriteLine("i:" + i);
-                Console.WriteLine("s[i]: " + s[i]);
-                //reset checkSumlength to zero here
-                int checkSumLength = 0;
-                //another loop to get the portion of chocolate squares equal to the birth month(m)
-                for( int j = i; j < i + m; j++)
+                if (s.Count == 1)
                 {
-                    Console.WriteLine("j: " + j);
-                    Console.WriteLine("s[j]: " + s[j]);
-                    Console.WriteLine("i + m: " + i + m);
-                    Console.WriteLine("List count: " + s.Count);
-                    if (j == s.Count - 1)
-                    {
-                        checkSumLength = s[j];
-                    }
-                    else
-                    {
-                        checkSumLength = s[j] + s[j + 1];
-                    }
-                    Console.WriteLine("sum: " + checkSumLength);
-
-                    if (checkSumLength == d)
+                    Console.WriteLine("IN HERE");
+                    if (s[i] == d)
+                    {                       
+                        checkSumLength = s[i];
+                        Console.WriteLine("Length: " + checkSumLength);
+                        noOfPortions += 1;
+                    }                       
+                }
+                else
+                {
+                    if ((s[i] + s[i + 1]) == d)
                     {
                         noOfPortions += 1;
+                        checkSumLength = s[i] + s[i + 1];
+                        Console.WriteLine(checkSumLength);
                     }
-                   
                 }
-
             }
-            
-            Console.WriteLine("NoOfPortions: " + noOfPortions);
+            Console.WriteLine("no of portions :" + noOfPortions);
             return noOfPortions;
-    
-
         }
     }
 }
