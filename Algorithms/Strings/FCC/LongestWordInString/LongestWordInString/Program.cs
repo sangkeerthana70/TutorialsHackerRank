@@ -12,16 +12,18 @@ namespace LongestWordInString
         static void Main(string[] args)
         {
             string s = "The quick brown fox jumped over the lazy dog";
-            int longestWord = FindLongestWord(s);
+            string longestWord = FindLongestWord(s);
 
         }
-        public static int FindLongestWord(string s)
+
+        public static string FindLongestWord(string s)
         {
             string[] strSplit = s.Split(' ');
             string currWord;
             int currLength;
             int maxLength = 0;
-
+            string longestWord = "";
+            // program to find the longest word in a string
             for(int i = 0; i < strSplit.Length; i++)
             {
                 currWord = strSplit[i];
@@ -31,10 +33,12 @@ namespace LongestWordInString
                 if(maxLength < currLength)
                 {
                     maxLength = currLength;
+                    longestWord = currWord;
                 }
             }
-            Console.WriteLine("Max Length: ");
-            return maxLength;
+            Console.WriteLine("Max Length: " + maxLength);
+            Console.WriteLine("Longest word: " + longestWord);
+            return longestWord;
         }
     }
 }
