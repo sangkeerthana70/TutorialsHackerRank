@@ -38,7 +38,7 @@ namespace Arrays
 
             //}
 
-            int[] arr1 = new int[] { 5, 4, 3, 2 };
+            int[] arr1 = new int[] { 1, 4, 3, 2 };
             int[] arr2 = new int[4];
 
             int len = arr1.Length - 1;
@@ -54,8 +54,9 @@ namespace Arrays
             Console.WriteLine("Copy reversed element in arr1 to arr2");
             foreach ( int num in arr2)
             {
-                Console.WriteLine(num);
+                Console.Write(num);
             }
+            Console.WriteLine();
 
             
         }
