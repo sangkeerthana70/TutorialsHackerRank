@@ -51,7 +51,7 @@ namespace StairCase
                 //print spaces first that is less than n - i - 1 for each row
                 for (int j = 0; j < (n - i) - 1; j++)
                 {
-                    Console.Write("0");                  
+                    Console.Write(" ");                  
                 }
                 // print # symbol in the same row after the space
                 for(int k = 0; k <= i; k++)
