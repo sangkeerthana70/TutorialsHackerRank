@@ -18,12 +18,17 @@ namespace Anagram
         static int anagram(string s)
         {
             int mismatchCount = 0;
-            string [] splitString = s.Split();
-            foreach(var item in splitString)
+            int num = s.Length / 2;
+            //string [] splitString = s.Split();
+            //foreach(var item in splitString)
+            //{
+            //    Console.WriteLine("item: " + item);
+            //}
+            if(s.Length % 2 == 0)
             {
-                Console.WriteLine("item: " + item);
+                string subString = s.Substring(0, num);
+                Console.WriteLine("subString: " + subString);
             }
-
 
             return mismatchCount;
         }
