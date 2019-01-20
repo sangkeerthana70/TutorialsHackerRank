@@ -10,15 +10,18 @@ namespace ArraysLeftRotate
     {
         static void Main(string[] args)
         {
-            int [] a = new int[] { 1, 2, 3, 4, 5 };
-            int d = 5;
+            int [] a = new int[] { 33, 47, 70, 37, 8, 53, 13, 93, 71, 72, 51, 100, 60, 87, 97 };
+            int d = 13;
+            
             int[] result = rotLeft(a, d);
         }
 
         // Complete the rotLeft function below.
         static int[] rotLeft(int[] a, int d)
         {
-            int[] newArr = new int[d];
+            int len = a.Length;
+            int j = 0;
+            int[] newArr = new int[len];
 
             // copy array from a to array newArr
             //for(var i = 0; i < a.Length; i++)
@@ -53,10 +56,10 @@ namespace ArraysLeftRotate
             return newArr;
             */
 
-            int len = a.Length;
-            int j = 0;
+            
             for (var i = 0; i < len; i++)
-            {               
+            {
+                Console.WriteLine("i "+ i);
                 j = i + d;
                 Console.WriteLine("j: " + j);
                 newArr[i] = a[j % len];// use modulus to shift the position in new array
