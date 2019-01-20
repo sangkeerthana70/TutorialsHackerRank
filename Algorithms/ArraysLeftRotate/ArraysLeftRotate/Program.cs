@@ -11,7 +11,7 @@ namespace ArraysLeftRotate
         static void Main(string[] args)
         {
             int [] a = new int[] { 1, 2, 3, 4, 5 };
-            int d = 2;
+            int d = 5;
             int[] result = rotLeft(a, d);
         }
 
@@ -28,7 +28,8 @@ namespace ArraysLeftRotate
             //}
             //Console.WriteLine(string.Join(" ", newArr));
             //return newArr;
-
+            //-------------------------------------------------------------
+            /* brute force way to rotate array for a given position
             for (var i = 0; i < a.Length; i++)
             {
                 Console.WriteLine("i: " + i);
@@ -47,6 +48,18 @@ namespace ArraysLeftRotate
                     Console.WriteLine("a[i + d] :" + a[i + d]);
                     newArr[i] = a[i + d];
                 }
+            }
+            Console.WriteLine(string.Join(" ", newArr));
+            return newArr;
+            */
+
+            int len = a.Length;
+            int j = 0;
+            for (var i = 0; i < len; i++)
+            {               
+                j = i + d;
+                Console.WriteLine("j: " + j);
+                newArr[i] = a[j % len];
             }
             Console.WriteLine(string.Join(" ", newArr));
             return newArr;
