@@ -10,39 +10,39 @@ namespace BreakingTheRecords
     {
         static void Main(string[] args)
         {
-            int[] scores = { 12, 24, 10, 24 };
+            int[] scores = { 10, 5, 20, 20, 4, 5, 2, 25, 1 };
             int[] result = breakingRecords(scores);
         }
 
         // Complete the breakingRecords function below.
         static int[] breakingRecords(int[] scores)
         {
-            int mostScoreCount = 0;
+            int mostScoreCount = -1;
             int leastScoreCount = 0;
+            int mostScore = 0;
+            int leastScore = 0;
             int maxValue = int.MinValue;
-            Console.WriteLine(maxValue);
+            
+            //Console.WriteLine(maxValue);
             int minValue = int.MaxValue;
-            Console.WriteLine("int.MaxValue: " + minValue);
+            //Console.WriteLine("int.MaxValue: " + minValue);
             for (int i = 0; i < scores.Length; i++)
             {
+                Console.WriteLine("i is: " + i);
                 int score = scores[i];
                 Console.WriteLine("Curr elem: " + score);
-                // max value
-                if(score >maxValue)
+                if(score > maxValue)
                 {
-
+                    
                     maxValue = score;
-                    //Console.WriteLine("MaxValue: " + maxValue);
+                    Console.WriteLine("mostScore " + maxValue);
+                    mostScoreCount += 1;
+                    Console.WriteLine("mostScoreCount " + mostScoreCount);
                 }
-                // min value
-                if(score < minValue)
-                {
-                    minValue = score;
-                    //Console.WriteLine("minValue: " + minValue);
-                }
+                
+
             }
-            Console.WriteLine("MaxValue: " + maxValue);
-            Console.WriteLine("minValue: " + minValue);
+            Console.WriteLine(string.Join(" ", maxValue));
             return scores;
 
         }
