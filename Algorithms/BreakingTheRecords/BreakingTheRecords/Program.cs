@@ -17,10 +17,10 @@ namespace BreakingTheRecords
         // Complete the breakingRecords function below.
         static int[] breakingRecords(int[] scores)
         {
+            int[] result = new int[] { }; 
             int mostScoreCount = -1;
             int leastScoreCount = -1;
-            int mostScore = 0;
-            int leastScore = 0;
+            
             int maxValue = int.MinValue;
             
             //Console.WriteLine(maxValue);
@@ -36,6 +36,7 @@ namespace BreakingTheRecords
                     
                     maxValue = score;
                     Console.WriteLine("mostScore " + maxValue);
+                    
                     mostScoreCount += 1;
                     Console.WriteLine("mostScoreCount " + mostScoreCount);
                 }
@@ -46,13 +47,16 @@ namespace BreakingTheRecords
                     minValue = score;
                     
                     Console.WriteLine("leastScore " + minValue);
+                    
                     leastScoreCount += 1;
                     Console.WriteLine("leastScoreCount " + leastScoreCount);
                 }
 
             }
+
             Console.WriteLine(string.Join(" ", mostScoreCount, leastScoreCount));
-            return scores;
+            
+            return result;
 
         }
 
