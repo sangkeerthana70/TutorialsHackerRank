@@ -17,12 +17,22 @@ namespace CSharpRefresh
             Console.WriteLine(word);
 
             //===========================================
-            Console.WriteLine();
+            Console.WriteLine("Passing by reference");
             Person person = new Person(" Tom Brady", 41);
             Console.WriteLine(person.name);
             var result1 = CalcNumberOfCharactersInString(person);
             Console.WriteLine(person.name);
+            //=============================================
+            Console.WriteLine("Operator overloading");
+            Person person2 = new Person("  Patrick Maholmes", 22);
+            Person person3 = person + person2;
 
+            Console.WriteLine(person3.name);
+            Console.WriteLine(person3.age);
+            // destructor will execute this code before doing actual garbage disposal
+            // person2 and person will reference the same memory and person2 's memory 
+            // will be unreferenced and forced to be cleared by the destructor
+            person2 = person;
            
         }
 
