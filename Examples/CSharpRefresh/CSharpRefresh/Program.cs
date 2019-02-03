@@ -26,6 +26,28 @@ namespace CSharpRefresh
            
         }
 
-        
+        public static int CalcNumberOfCharactersInString(string word)
+        {
+            //  example of primitive types passed by value
+            // the argument value is copied into another memory space and changes are only visible here and not outside the function
+            word = (word.Trim(' '));
+            int res = word.Length;
+            Console.WriteLine(word);
+            return res;
+
+        }
+
+        public static int CalcNumberOfCharactersInString(Person person)
+        {
+            // example of an object passed by reference where an object's memory is referenced here and the changes made to the variable is also visible outside
+            person.name = person.name.Trim();
+            int res = person.name.Length;
+            Console.WriteLine(person.name);
+            return res;
+
+
+        }
+
+
     }
 }
