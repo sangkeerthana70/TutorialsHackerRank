@@ -18,7 +18,7 @@ namespace CSharpRefresh
 
             //===========================================
             Console.WriteLine();
-            Person person = new Person(" Anu", 70);
+            Person person = new Person(" Tom Brady", 41);
             Console.WriteLine(person.name);
             var result1 = CalcNumberOfCharactersInString(person);
             Console.WriteLine(person.name);
@@ -33,6 +33,7 @@ namespace CSharpRefresh
             word = (word.Trim(' '));
             int res = word.Length;
             Console.WriteLine(word);
+            Console.WriteLine(res);
             return res;
 
         }
@@ -43,6 +44,7 @@ namespace CSharpRefresh
             person.name = person.name.Trim();
             int res = person.name.Length;
             Console.WriteLine(person.name);
+            Console.WriteLine(res);
             return res;
 
 
