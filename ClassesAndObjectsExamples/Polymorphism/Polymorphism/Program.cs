@@ -17,12 +17,17 @@ namespace Polymorphism
             Rectangle rectangle = new Rectangle(15, 5);
             Console.WriteLine(rectangle.Area());// returns 0 Even though rectangle does not have a method called area, it works because it inherited the method from the base class Shape. This is inheritence
 
-            // Method override at work
+            // Method override at work - polymorphism
             Shape x = new Shape();
             Console.WriteLine(x.Area());
 
             Square square = new Square(10);
             Console.WriteLine(square.Area());// returns 100 Square's area method is invoked, override at work
+
+            // Another example of polymorphism
+            Shape z = new Rectangle(5, 2);
+            Console.WriteLine(z.Area()); // returns 10 
+            // this works because you can supply a child instance in place of a parent. This is polymorphism
 
         }
     }

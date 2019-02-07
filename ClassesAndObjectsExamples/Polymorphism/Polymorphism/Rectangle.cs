@@ -18,5 +18,10 @@ namespace Polymorphism
             this.width = w;
         }
 
+        public override int Area()
+        {
+            return length * width;
+        }
+
     }
 }
