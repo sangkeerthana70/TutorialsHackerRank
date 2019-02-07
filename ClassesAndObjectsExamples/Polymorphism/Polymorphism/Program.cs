@@ -28,7 +28,7 @@ namespace Polymorphism
             Shape z = new Rectangle(5, 2);
             Console.WriteLine(z.Area()); // returns 10 
             // this works because you can supply a child instance in place of a parent. This is polymorphism
-
+            // // because area is a virtual method, at run time, CLR will realise that x is an instance of Rectangle, it will invoke the method from Rectangle class
         }
     }
 }
