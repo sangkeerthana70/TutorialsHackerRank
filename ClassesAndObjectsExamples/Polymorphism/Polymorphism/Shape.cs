@@ -9,7 +9,7 @@ namespace Polymorphism
     public class Shape
     {
 
-        public int Area()
+        public virtual int Area()
         {
             return 0;
         }
