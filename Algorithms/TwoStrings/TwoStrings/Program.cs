@@ -10,15 +10,36 @@ namespace TwoStrings
     {
         static void Main(string[] args)
         {
-            string a = "a";
+            string a = "r";
             string b = "art";
-            string result = twoStrings(a, b);
+            string result = TwoStrings(a, b);
+            Console.WriteLine("Result: " + result);
 
         }
 
         // Complete the twoStrings function below.
-        static string twoStrings(string s1, string s2)
+        static string TwoStrings(string s1, string s2)
         {
+            bool match = false;
+            string subStr = "";
+            string returnStr = "";
+            string noMatchStr = "";
+            for(var i = 0; i < s2.Length; i++)
+            {
+                if(s1[i] == s2[i])
+                {
+                    
+                    subStr += s1[i];
+                    Console.WriteLine(subStr);
+                    return returnStr += "YES";
+                }
+                
+
+            }
+
+            return noMatchStr += "NO";
+            
+            
 
 
         }
