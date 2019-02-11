@@ -10,7 +10,7 @@ namespace TwoStrings
     {
         static void Main(string[] args)
         {
-            string a = "r";
+            string a = "rat";
             string b = "art";
             string result = TwoStrings(a, b);
             Console.WriteLine("Result: " + result);
@@ -20,25 +20,46 @@ namespace TwoStrings
         // Complete the twoStrings function below.
         static string TwoStrings(string s1, string s2)
         {
-            bool match = false;
+            string match = "";
+            string noMatch = "";
             string subStr = "";
-            string returnStr = "";
-            string noMatchStr = "";
-            for(var i = 0; i < s2.Length; i++)
-            {
-                if(s1[i] == s2[i])
-                {
-                    
-                    subStr += s1[i];
-                    Console.WriteLine(subStr);
-                    return returnStr += "YES";
-                }
-                
+            Console.WriteLine(s2.Length);
 
+            for(var j = 0; j < s1.Length; j++)
+            {
+                Console.WriteLine("j: " + j);
+                Console.WriteLine("s1[j] : " + s1[j]);
+                for (var i = 0; i < s2.Length; i++)
+                {
+                    Console.WriteLine("s2[i] : " + s2[i]);
+
+                    if (s1[j] == s2[i])
+                    {
+                        match += s1[j];
+                        Console.WriteLine("match: " + match);
+                        subStr = "YES";
+                    }
+                    else
+                    {
+                        noMatch += s2[i];
+                        Console.WriteLine("noMatch: " + noMatch);
+                        subStr = "NO";
+
+                    }
+                }
             }
 
-            return noMatchStr += "NO";
+            return subStr;
             
+
+
+
+
+
+
+
+
+            return "";
             
 
 
