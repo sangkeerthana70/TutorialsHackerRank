@@ -20,8 +20,6 @@ namespace TwoStrings
         // Complete the twoStrings function below.
         static string TwoStrings(string s1, string s2)
         {
-            string match = "";
-            string noMatch = "";
             string subStr = "";
             Console.WriteLine(s2.Length);
 
@@ -35,15 +33,15 @@ namespace TwoStrings
 
                     if (s1[j] == s2[i])
                     {
-                        match += s1[j];
-                        Console.WriteLine("match: " + match);
+                        //match += s1[j];
+                        //Console.WriteLine("match: " + match);
                         subStr = "YES";
                         return subStr;
                     }
                     else
                     {
-                        noMatch += s2[i];
-                        Console.WriteLine("noMatch: " + noMatch);
+                        //noMatch += s2[i];
+                        //Console.WriteLine("noMatch: " + noMatch);
                         subStr = "NO";
 
                     }
@@ -51,19 +49,7 @@ namespace TwoStrings
             }
 
             return subStr;
-            
-
-
-
-
-
-
-
-
-            return "";
-            
-
-
+ 
         }
     }
 }
