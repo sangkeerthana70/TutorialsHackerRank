@@ -10,8 +10,8 @@ namespace TwoStrings
     {
         static void Main(string[] args)
         {
-            string a = "rat";
-            string b = "art";
+            string a = "hi";
+            string b = "world";
             string result = TwoStrings(a, b);
             Console.WriteLine("Result: " + result);
 
@@ -38,6 +38,7 @@ namespace TwoStrings
                         match += s1[j];
                         Console.WriteLine("match: " + match);
                         subStr = "YES";
+                        return subStr;
                     }
                     else
                     {
