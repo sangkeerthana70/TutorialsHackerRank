@@ -10,6 +10,7 @@ namespace Elementary
     {
         static void Main(string[] args)
         {
+            /*
             Console.WriteLine("Hello World!");
 
             // program that asks the user for their name and greets them with their name.
@@ -29,7 +30,22 @@ namespace Elementary
                     break;
                 }
             }
-            
+            */
+
+            // program that asks the user for a number n and prints the sum of the numbers 1 to n
+
+            Console.WriteLine("Please enter a number");
+            int numInput = Int32.Parse(Console.ReadLine());
+            Console.WriteLine(numInput);
+            int sum = 0;
+            for(var i = 0; i <= numInput; i++)
+            {
+                sum += i;
+                //Console.WriteLine("Sum of: " + i + " is " + sum);
+                
+            }
+            Console.WriteLine("Sum : " + sum);
+
 
         }
     }
