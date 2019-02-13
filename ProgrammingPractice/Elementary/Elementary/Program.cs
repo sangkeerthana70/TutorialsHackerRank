@@ -60,7 +60,7 @@ namespace Elementary
             }
             Console.WriteLine("sum of multiples of 3 and 5 less than 17 : " + sum1);
 
-            */
+            
             // program that asks the user for a number n and gives them the possibility to choose between computing the sum and computing the product of 1,…,n.
 
             Console.WriteLine("Please enter a number");
@@ -74,6 +74,7 @@ namespace Elementary
                 for(var i = 1; i <= input; i++)
                 {
                     sum2 += i;
+                    Console.WriteLine("sum: " + i);
                 }
                 Console.WriteLine("Sum of numbers from 1 " + " to " + input + " is " + sum2);
             }
@@ -83,10 +84,26 @@ namespace Elementary
                 for(var i = 1; i <= input; i++)
                 {
                     product *= i;
-                    Console.WriteLine(" product * i " + product + i);
+                    Console.WriteLine(" product *  " + i + " is " + product);
                 }
                 Console.WriteLine("product "  + product);
             }
+
+            */
+
+            //  program that prints a multiplication table for numbers up to 12.
+
+            Console.WriteLine("Enter a number to print the multiplication table");
+            int number =  Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(number);
+
+            int product = 1;
+            for(var i = 1; i <= 12; i++)
+            {
+                product = number * i;
+                Console.WriteLine(i + " * " + number + " is " + product);
+            }
+
         }
     }
 }
