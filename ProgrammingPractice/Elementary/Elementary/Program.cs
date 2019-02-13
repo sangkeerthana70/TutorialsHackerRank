@@ -89,7 +89,7 @@ namespace Elementary
                 Console.WriteLine("product "  + product);
             }
 
-            */
+            
 
             //  program that prints a multiplication table for numbers up to 12.
 
@@ -104,6 +104,38 @@ namespace Elementary
                 Console.WriteLine(i + " * " + number + " is " + product);
             }
 
+            */
+
+            // a program that prints all prime numbers
+
+            Console.WriteLine("Enter a number: ");
+            int inputNum = Convert.ToInt32(Console.ReadLine());
+
+            bool result = IsPrime(inputNum);
+
+            
+
         }
+
+        static bool IsPrime(int inputNum)
+        {
+            int prime = 0;
+            for (var i = 2; i < inputNum; i++)
+            {
+                if (inputNum % i == 0)
+                {
+                    Console.WriteLine(inputNum % i);
+                    Console.WriteLine(inputNum + " is not prime");
+                    return false;
+                }
+                else
+                {
+
+                    Console.WriteLine(inputNum + " is prime ");
+                }
+            }
+            return true;
+        }
+
     }
 }
