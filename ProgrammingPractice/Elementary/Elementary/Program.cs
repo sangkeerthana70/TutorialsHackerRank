@@ -77,6 +77,16 @@ namespace Elementary
                 }
                 Console.WriteLine("Sum of numbers from 1 " + " to " + input + " is " + sum2);
             }
+            else
+            {
+                int product = 1;
+                for(var i = 1; i <= input; i++)
+                {
+                    product *= i;
+                    Console.WriteLine(" product * i " + product + i);
+                }
+                Console.WriteLine("product "  + product);
+            }
         }
     }
 }
