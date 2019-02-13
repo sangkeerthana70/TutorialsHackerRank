@@ -46,7 +46,19 @@ namespace Elementary
             }
             Console.WriteLine("Sum : " + sum);
 
+            // Modify the previous program such that only multiples of three or five are considered in the sum, e.g. 3, 5, 6, 9, 10, 12, 15 for n=17
 
+            int n = 17;
+            int sum1 = 0;
+            for(var i = 0; i < n; i++)
+            {
+                if((i % 3 == 0) || (i % 5 == 0))
+                {
+                    sum1 += i;
+                    Console.WriteLine("Sum of: " + i + " is " + sum1);
+                }
+            }
+            Console.WriteLine("sum of multiples of 3 and 5 less than 17 : " + sum1);
         }
     }
 }
