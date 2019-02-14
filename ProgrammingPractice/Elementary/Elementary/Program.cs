@@ -129,12 +129,19 @@ namespace Elementary
                 if(i >= 5)
                 {
                     Console.WriteLine("You have exceeded five attempts");
+                    Console.WriteLine("Game ended");
                     break;
                 }
-                if (randNumToGuess == guess)
+                if (randNumToGuess == guess || i == 5)
                 {
+                    Console.WriteLine("Congratulations you have won");
                     Console.WriteLine("You guessed correct number: " + guess);
                     break;
+                }
+                else
+                {
+                    Console.WriteLine("You guessed incorrect number: " + guess);
+                    Console.WriteLine("You have " + (5 - i) + " more attempts ");
                 }
                 i++;
             }
