@@ -124,13 +124,15 @@ namespace Elementary
             {
                 if (inputNum % i == 0)
                 {
-                    Console.WriteLine(inputNum % i);
+                    Console.WriteLine("i is " + i);
+                    Console.WriteLine("inputNum % i : " + inputNum % i);
                     Console.WriteLine(inputNum + " is not prime");
                     return false;
                 }
                 else
                 {
-
+                    Console.WriteLine("i is " + i);
+                    Console.WriteLine("inputNum % i : " + inputNum % i);
                     Console.WriteLine(inputNum + " is prime ");
                 }
             }
