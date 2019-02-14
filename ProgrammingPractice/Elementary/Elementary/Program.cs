@@ -126,7 +126,7 @@ namespace Elementary
                 int guess = Convert.ToInt32(Console.ReadLine());
 
                 Console.WriteLine("Attempt number: " + i);
-                if(i > 5)
+                if(i >= 5)
                 {
                     Console.WriteLine("You have exceeded five attempts");
                     break;
