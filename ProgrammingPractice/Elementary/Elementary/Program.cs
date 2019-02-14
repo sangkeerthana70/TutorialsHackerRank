@@ -104,7 +104,6 @@ namespace Elementary
                 Console.WriteLine(i + " * " + number + " is " + product);
             }
 
-            */
 
             // a program that prints all prime numbers
 
@@ -112,7 +111,38 @@ namespace Elementary
             int inputNum = Convert.ToInt32(Console.ReadLine());
 
             bool result = IsPrime(inputNum);
+            */
 
+            // guessing game
+            Random rand = new Random();
+            int randNumToGuess = rand.Next(10);
+            Console.WriteLine(randNumToGuess);
+            
+
+            int i = 1;
+            while (true)
+            {
+                Console.WriteLine("Guess a number between 1 and 10");
+                int guess = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Attempt number: " + i);
+                if(i > 5)
+                {
+                    Console.WriteLine("You have exceeded five attempts");
+                    break;
+                }
+                if (randNumToGuess == guess)
+                {
+                    Console.WriteLine("You guessed correct number: " + guess);
+                    break;
+                }
+                i++;
+            }
+            
+            
+            
+
+            //Console.WriteLine(");
             
 
         }
