@@ -156,11 +156,11 @@ namespace Elementary
             {
                 if((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0))
                 {
-                    Console.WriteLine("Input is a leap year");
+                    Console.WriteLine(year + " is a leap year");
                 }
                 else
                 {
-                    Console.WriteLine("Input is not a leap year");
+                    Console.WriteLine(year + " is not a leap year");
                 }
             }
 
