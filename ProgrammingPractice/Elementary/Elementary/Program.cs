@@ -151,28 +151,24 @@ namespace Elementary
             */
 
             // program that prints the next 20 leap years
-            int year = 2008;
-            for(var i = 0; i <= 20; i++)
+            int year = 2019;
+            int leapCount = 0;
+            
+            while (true)
             {
-                if((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0))
+                if(leapCount != 20)
                 {
-                    Console.WriteLine(year + " is a leap year");
+                    if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0))
+                    {
+                        Console.WriteLine(year);
+                        //Console.WriteLine(year + " is a leap year");
+                        leapCount += 1;
+                        //Console.WriteLine("leapCount: " + leapCount);
+                    }
+                    
                 }
-                else
-                {
-                    Console.WriteLine(year + " is not a leap year");
-                }
+                year++;
             }
-
-
-
-
-
-
-
-            //Console.WriteLine(");
-
-
         }
 
         static bool IsPrime(int inputNum)

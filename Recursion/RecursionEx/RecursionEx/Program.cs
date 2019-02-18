@@ -11,7 +11,7 @@ namespace RecursionEx
         static void Main(string[] args)
         {
             int n = 1;
-            int m = 10;
+            int m = 14;
             int result = CalculateSumRecursively(n, m);
             Console.WriteLine(result);
         }
