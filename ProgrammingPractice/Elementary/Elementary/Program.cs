@@ -103,7 +103,7 @@ namespace Elementary
                 product = number * i;
                 Console.WriteLine(i + " * " + number + " is " + product);
             }
-
+            */
 
             // a program that prints all prime numbers
 
@@ -111,8 +111,9 @@ namespace Elementary
             int inputNum = Convert.ToInt32(Console.ReadLine());
 
             bool result = IsPrime(inputNum);
+            Console.WriteLine("result: " + result);
             
-            
+            /*
 
             // guessing game
             Random rand = new Random();
@@ -148,7 +149,8 @@ namespace Elementary
                 }
                 i++;
             }
-            */
+            
+
 
             // program that prints the next 20 leap years
             int year = 2019;
@@ -169,6 +171,7 @@ namespace Elementary
                 }
                 year++;
             }
+            */
         }
 
         static bool IsPrime(int inputNum)
@@ -180,7 +183,7 @@ namespace Elementary
                 {
                     Console.WriteLine("i is " + i);
                     Console.WriteLine("inputNum % i : " + inputNum % i);
-                    Console.WriteLine(inputNum + " is not prime");
+                    //Console.WriteLine(inputNum + " is not prime");
                     return false;
                 }
                 else
