@@ -14,8 +14,14 @@ namespace PracticeWithStacks
             Stack s = new Stack();
             s.push(5);
             s.push(10);
-            Console.WriteLine(s.pop());
-            Console.WriteLine(s.pop());
+            s.push(15);
+            s.push(20);
+            s.push(25);
+            s.push(30);
+            Console.WriteLine("pop 1: " + s.pop());
+            Console.WriteLine("pop 2: " + s.pop());
+            Console.WriteLine("pop 3: " + s.pop());
+            Console.WriteLine("pop 4: " + s.pop());
         }
 
         private class Stack
@@ -52,6 +58,7 @@ namespace PracticeWithStacks
                 {
                     Console.WriteLine("num in List: " + num);
                 }
+                Console.WriteLine(stack.LastOrDefault());
 
                 return lastElement;
             }
