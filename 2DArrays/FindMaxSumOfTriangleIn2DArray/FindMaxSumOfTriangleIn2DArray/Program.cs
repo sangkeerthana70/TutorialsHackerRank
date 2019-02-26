@@ -31,10 +31,10 @@ namespace FindMaxSumOfTriangleIn2DArray
 
             // access the tip of the triangle
             // outer loop to access the rows
-            for(var i = 0; i < a.GetLength(0); i++)
+            for(var i = 0; i < a.GetLength(0) - 1; i++)
             {
                 // inner loop to access the columns
-                for(var j = 0; j < a.GetLength(1); j++)
+                for(var j = 1; j < a.GetLength(1); j++)
                 {
                     // print i rows and j columns
                     Console.Write(a[i,j] + " ");
