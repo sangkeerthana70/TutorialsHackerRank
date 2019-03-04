@@ -80,6 +80,17 @@ namespace StacksAndQueues
             Console.WriteLine("Peek at second item in queue " + numberQueue.Peek());
             numberQueue.Dequeue();
             numberQueue.Dequeue();
+            Console.WriteLine("======================================");
+            StringQueue stringQueue = new StringQueue();
+            stringQueue.Enqueue("Hi");
+            stringQueue.Enqueue("there");
+            stringQueue.Enqueue("how");
+            stringQueue.Enqueue("are");
+            stringQueue.Enqueue("you");
+            stringQueue.Dequeue();
+            Console.WriteLine("Peek at second item in queue " + stringQueue.Peek());
+            stringQueue.Dequeue();
+            stringQueue.Dequeue();
 
         }
     }
