@@ -38,15 +38,27 @@ namespace StacksAndQueues
         // method 3 Enqueuing an item by adding the int to the tail of the LinkedList
         public void Enqueue(int n)
         {
+            Console.WriteLine("LinkedList after adding a node...");
             queue.AddLast(n);
+            foreach (var num in queue)
+            {
+                Console.WriteLine(num);
+            }
         }
 
         // method 4 Dequeuing an item by removing an item at the first index in LinkedList 
         public int Dequeue()
         {
-            
+
             //var objectToInt = Convert.ToInt32(queue);
-            return (int)queue.RemoveFirst();
+           
+            Console.WriteLine("LinkedList after removing a node...");
+            queue.RemoveFirst();
+            foreach (var num in queue)
+            {
+                Console.WriteLine(num);
+            }
+            return 0;
         }
 
         // peek at the first item in queue
@@ -54,8 +66,20 @@ namespace StacksAndQueues
         {
             return (int)queue.FirstOrDefault();
         }
+
+
+
         static void Main(string[] args)
         {
+            Queuey numberQueue = new Queuey();
+            numberQueue.Enqueue(5);
+            numberQueue.Enqueue(7);
+            numberQueue.Enqueue(9);
+            numberQueue.Enqueue(11);
+            numberQueue.Dequeue();
+            Console.WriteLine("Peek at second item in queue " + numberQueue.Peek());
+            numberQueue.Dequeue();
+            numberQueue.Dequeue();
 
         }
     }
