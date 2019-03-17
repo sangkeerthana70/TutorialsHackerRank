@@ -23,7 +23,7 @@ namespace LinkedListExample
             // // Insert a node with data="15" at index 2
 
             var currentNode = myLinkedList.First;
-            Console.WriteLine("curr node: " + currentNode.Value);
+            Console.WriteLine("curr node: " + currentNode.Value             );
             while(currentNode.Next != null)
             {
                 currentNode = currentNode.Next;
