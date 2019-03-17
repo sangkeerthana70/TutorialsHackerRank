@@ -13,14 +13,23 @@ namespace InsertAtHead
             List<int> intList = new List<int> { 3, 1, 2, 3, 4, 5 };
 
             var firstNode = CreateLinkedList(intList);
-            Console.WriteLine("result: " + firstNode.value);
+            
 
+            // create a new node to be inserted
             ListNode<int> l = new ListNode<int>();
+            // assign a value
             int lvalue = l.value;
+            // pass the value
             lvalue = 10;
-           
+
+            // call the printList method before inserting a node
+            printLinkedList(firstNode);
+            // call InsertNodeAtHead function 
             var insertList = InsertNodeAtHead(lvalue , firstNode);
-            Console.WriteLine("res of insertList: " + insertList.value);
+            
+            // call the printList method after inserting a node
+            printLinkedList(insertList);
+
         }
 
         public static ListNode<int> CreateLinkedList(List<int> intList)
@@ -61,7 +70,23 @@ namespace InsertAtHead
             return insertNode;
         }
 
-    }
+        static void printLinkedList(ListNode<int> head)
+        {
 
-    
+            var currNode = head;
+            Console.WriteLine(currNode.value);
+            while (currNode != null)
+            {
+                if (currNode.next == null)
+                {
+                    break;
+                }
+                else
+                {
+                    currNode = currNode.next;
+                    Console.WriteLine(currNode.value);
+                }
+            }       
+        }
+    }    
 }
