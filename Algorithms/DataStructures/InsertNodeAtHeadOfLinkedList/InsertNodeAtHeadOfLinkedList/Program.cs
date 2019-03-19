@@ -20,8 +20,8 @@ namespace InsertNodeAtHeadOfLinkedList
                 int llistItem = Convert.ToInt32(Console.ReadLine());
                 SinglyLinkedListNode llist_head = insertNodeAtHead(llist.head, llistItem);
                 llist.head = llist_head;
-                PrintSinglyLinkedList(llist.head);
-                //Console.WriteLine("llist.head.value: " + llist.head);
+                //PrintSinglyLinkedList(llist.head);
+                
             }
         }
 
@@ -76,20 +76,17 @@ namespace InsertNodeAtHeadOfLinkedList
         {
             Console.WriteLine("In Insert");
 
+            SinglyLinkedListNode insertNewNode = new SinglyLinkedListNode(data);
             if(llist == null)
             {
-                return llist;
+                insertNewNode.data = data;
+                insertNewNode.next = llist;
+                Console.WriteLine("insertNewNode: " + insertNewNode.data);
+                Console.WriteLine("insertNewNode: " + insertNewNode.next);
+                
             }
 
-            var currNode = llist;
-            while(currNode != null)
-            {
-                currNode.data = data;
-                currNode = currNode.next;
-                Console.WriteLine("currNode.data: " + currNode.data);
-            }
-
-            return llist;
+            return insertNewNode;
 
         }
     }
