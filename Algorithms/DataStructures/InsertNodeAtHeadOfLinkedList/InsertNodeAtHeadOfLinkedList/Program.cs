@@ -14,15 +14,19 @@ namespace InsertNodeAtHeadOfLinkedList
            
 
             int llistCount = Convert.ToInt32(Console.ReadLine());
+            
 
             for (int i = 0; i < llistCount; i++)
             {
+                
                 int llistItem = Convert.ToInt32(Console.ReadLine());
+                
                 SinglyLinkedListNode llist_head = insertNodeAtHead(llist.head, llistItem);
                 llist.head = llist_head;
-                //PrintSinglyLinkedList(llist.head);
+               
                 
             }
+            PrintSinglyLinkedList(llist.head);
         }
 
 
@@ -45,6 +49,8 @@ namespace InsertNodeAtHeadOfLinkedList
             while (node != null)
             {
                 var currNode = node;
+                Console.WriteLine("currNode.data: " + currNode.data);
+                Console.WriteLine("currNode.next: " + currNode.next);
                 if (currNode.next == null)
                 {
                     break;
@@ -74,19 +80,13 @@ namespace InsertNodeAtHeadOfLinkedList
          */
         static SinglyLinkedListNode insertNodeAtHead(SinglyLinkedListNode llist, int data)
         {
-            Console.WriteLine("In Insert");
+            Console.WriteLine("In insert method");
+            SinglyLinkedListNode newNode = new SinglyLinkedListNode(data);
+            newNode.next = llist;
+            Console.WriteLine("data is: " + data);
+            Console.WriteLine("llist: " + llist);
 
-            SinglyLinkedListNode insertNewNode = new SinglyLinkedListNode(data);
-            if(llist == null)
-            {
-                insertNewNode.data = data;
-                insertNewNode.next = llist;
-                Console.WriteLine("insertNewNode: " + insertNewNode.data);
-                Console.WriteLine("insertNewNode: " + insertNewNode.next);
-                
-            }
-
-            return insertNewNode;
+            return newNode;
 
         }
     }
