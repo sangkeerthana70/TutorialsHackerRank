@@ -19,24 +19,24 @@ namespace _2DArrays_DS
             arr[5] = new int[6] { 0, 0, 1, 2, 4, 0 };
 
 
-            //for (int i = 0; i < 6; i++)
-            //{
-            //    arr[i] = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp));
-            //}
-
             int result = hourglassSum(arr);
             Console.WriteLine("max sum of hourglass: " + result);
         }
 
-        // Complete the hourglassSum function below.
+        /* Complete the hourglassSum function below.
+          This program finds the maximum sum of hourglass in a jagged array which can have 
+          varying row and column length
+        */
         static int hourglassSum(int[][] arr)
         {
             /* accessing a jagged array which can have varying length of rows and columns
             // Display the array elements:
+            //loop to iterate over the rows
             for (int i = 0; i < arr.Length; i++)
             {
                 System.Console.Write("Element({0}): ", i);
 
+                // loop to iterate over the columns
                 for (int j = 0; j < arr[i].Length; j++)
                 {
                     System.Console.Write("{0}{1}", arr[i][j], j == (arr[i].Length - 1) ? "" : " ");
@@ -53,11 +53,11 @@ namespace _2DArrays_DS
                 // inner loop to increment the column count upto column count -2 
                 for(int j = 0; j < arr[i].Length -2; j++)
                 {
-                    Console.WriteLine("({0},{1})",i,j);
+                    //Console.WriteLine("({0},{1})",i,j);
                     hourGlassSum = arr[i][j] + arr[i][j+1] + arr[i][j+2];
                     hourGlassSum += arr[i + 1][j + 1];
                     hourGlassSum += arr[i + 2][j] + arr[i + 2][j + 1] + arr[i + 2][j + 2];
-                    Console.WriteLine(hourGlassSum);
+                    //Console.WriteLine(hourGlassSum);
 
                     if (hourGlassSum > maxValue)
                     {
