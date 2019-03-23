@@ -22,11 +22,10 @@ namespace ArraysDSReverseAnArray
             int[] reverseArray = new int[a.Length];
             for (int i = length; i >= 0; i--)
             {
-                Console.WriteLine("i = " + i);
-                Console.WriteLine("arr1[i] = " + a[i]);
-                Console.WriteLine();
+                //Console.WriteLine("i = " + i);
+                //Console.WriteLine("a[i] = " + a[i]);
                 reverseArray[length - i] = a[i];
-                Console.WriteLine("reverseArray[length - i] : " + reverseArray[length-i]);
+                //Console.WriteLine("reverseArray[length - i] : " + reverseArray[length-i]);
             }
             return reverseArray;
         }
