@@ -27,50 +27,58 @@ namespace diagonalDifference
             int rToLDiagDiff = 0;
             int diagonalDifference = 0;
             int len = arr.GetLength(0);
+            
 
-            for (var i = 0; i <= len -1; i++)
+
+            for (int i = 0; i < len -1; i++)
             {
-                
-                Console.WriteLine("len: " + len);
-                Console.WriteLine("i is: " + i);
-                int[] innerArray = arr[i];
-                Console.WriteLine(String.Join(" ", innerArray));
-                for(var j = 0; j <= innerArray.Length; j++)          
+                if (i > 0)
                 {
-                    // to loop through the innerArray only once use this condition
-                    if(i == j)
-                    {
-                        Console.WriteLine("i is: " + i);
-                        Console.WriteLine("j is: " + j);
-                        lToRDiagDiff = arr[i][j];
-                        //Console.WriteLine(arr[i][j]);
-                        lToRDiagDiff += arr[i + 1][j + 1];
-                        //Console.WriteLine(arr[i + 1][j + 1]);
-                        lToRDiagDiff += arr[i + 2][j + 2];                       
-                        //Console.WriteLine(arr[i + 2][j + 2]);
-                        lToRDiagDiff += arr[i + 3][j + 3];
-                        //Console.WriteLine(arr[i + 3][j + 3]);
-                        Console.WriteLine(lToRDiagDiff);
-                        Console.WriteLine("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx");
-                        rToLDiagDiff = arr[i][len-1];
-                        Console.WriteLine("ll" + arr[i][len-1]);
-                        rToLDiagDiff += arr[i + 1][len - 2];
-                        Console.WriteLine(arr[i + 1][len - 2]);
-                        rToLDiagDiff += arr[i + 2][len - 3];
-                        Console.WriteLine(arr[i + 2][len - 3]);
-                        rToLDiagDiff += arr[i + 3][len - 4];
-                        Console.WriteLine(arr[i + 3][len - 4]);
-                        Console.WriteLine(rToLDiagDiff);
-                    }
-                    else if(i != j)
+                    break;
+                }
+                int[] innerArray = arr[i];
+                int row = arr.GetLength(0);
+                Console.WriteLine("rows: " + row);
+                int col = innerArray.Length;
+                Console.WriteLine("columns: " + col);
+
+                for (var j = 0; j < innerArray.Length; j++)
+                {
+                    if(j > 0)
                     {
                         break;
-                    }                   
+                    }
+                    
+                    lToRDiagDiff = arr[i][j];
+                    Console.WriteLine(arr[i][j]);
+                    Console.WriteLine(arr[row-3][col-3]);
+                    Console.WriteLine(arr[row - 2][col-2]);
+                    Console.WriteLine(arr[row-1][col-1]);
+                    lToRDiagDiff += arr[row - 3][col - 3];
+                    lToRDiagDiff += arr[row - 2][col - 2];
+                    lToRDiagDiff += arr[row - 1][col - 1];
+                    Console.WriteLine(lToRDiagDiff);
+                    Console.WriteLine("+++++++=======================================");
+                    rToLDiagDiff = arr[i][col - 1];
+                    //Console.WriteLine(arr[i][col-1]);                    
+                    //Console.WriteLine(arr[row-3][col-2]);
+                    //Console.WriteLine(arr[row-2][col-3]);
+                    //Console.WriteLine(arr[row-1][col-4]);
+                    rToLDiagDiff += arr[row - 3][col - 2];
+                    rToLDiagDiff += arr[row - 2][col - 3];
+                    rToLDiagDiff += arr[row - 1][col - 4];
+                    Console.WriteLine(rToLDiagDiff);
+
                 }
+
                 diagonalDifference = Math.Abs(lToRDiagDiff - rToLDiagDiff);
+                    
+                
+                
             }
 
             return diagonalDifference;
+
         }
     }
 }
