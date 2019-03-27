@@ -23,62 +23,77 @@ namespace diagonalDifference
         // Complete the diagonalDifference function below.
         static int diagonalDifference(int[][] arr)
         {
+           
             int lToRDiagDiff = 0;
             int rToLDiagDiff = 0;
             int diagonalDifference = 0;
-            int len = arr.GetLength(0);
             
+            int n = arr.GetLength(0);
+            //Console.WriteLine("n: " + n);
+            int m = n;
+            //Console.WriteLine("m is: " + m);
 
-
-            for (int i = 0; i < len -1; i++)
+            // print the elements in the matrix
+            for (int i = 0; i < n; i++)
             {
-                if (i > 0)
-                {
-                    break;
-                }
-                int[] innerArray = arr[i];
-                int row = arr.GetLength(0);
-                Console.WriteLine("rows: " + row);
-                int col = innerArray.Length;
-                Console.WriteLine("columns: " + col);
-
-                for (var j = 0; j < innerArray.Length; j++)
-                {
-                    if(j > 0)
-                    {
-                        break;
-                    }
-                    
-                    lToRDiagDiff = arr[i][j];
-                    Console.WriteLine(arr[i][j]);
-                    Console.WriteLine(arr[row-3][col-3]);
-                    Console.WriteLine(arr[row - 2][col-2]);
-                    Console.WriteLine(arr[row-1][col-1]);
-                    lToRDiagDiff += arr[row - 3][col - 3];
-                    lToRDiagDiff += arr[row - 2][col - 2];
-                    lToRDiagDiff += arr[row - 1][col - 1];
-                    Console.WriteLine(lToRDiagDiff);
-                    Console.WriteLine("+++++++=======================================");
-                    rToLDiagDiff = arr[i][col - 1];
-                    //Console.WriteLine(arr[i][col-1]);                    
-                    //Console.WriteLine(arr[row-3][col-2]);
-                    //Console.WriteLine(arr[row-2][col-3]);
-                    //Console.WriteLine(arr[row-1][col-4]);
-                    rToLDiagDiff += arr[row - 3][col - 2];
-                    rToLDiagDiff += arr[row - 2][col - 3];
-                    rToLDiagDiff += arr[row - 1][col - 4];
-                    Console.WriteLine(rToLDiagDiff);
-
-                }
-
-                diagonalDifference = Math.Abs(lToRDiagDiff - rToLDiagDiff);
-                    
-                
-                
+                for (var j = 0; j < n; j++)
+                    Console.Write("{0}  ", arr[i][j]);
+                Console.Write("\n");
             }
 
-            return diagonalDifference;
+            //calculate the sum of left-to-right diagonals
+            for(int i = 0; i < n; i++)
+            {
+                //Console.WriteLine("i is: " + i);
+                
+                m = i;
+                Console.WriteLine("m is: " + m);
+                for(int j = 0; j < n; j++)
+                {
+                    //Console.WriteLine("j before: " + j);
+                    if(j == m)
+                    {
+                        //Console.WriteLine("j after: " + j);
+                        //Console.WriteLine(arr[i][j]);
+                        lToRDiagDiff += arr[i][j];
+                        Console.WriteLine("ltoR: " + lToRDiagDiff);
+                    }
+                }
+            }
+            Console.Write("Addition of the  left-to-right Diagonal elements is :{0}\n", lToRDiagDiff);
 
+
+            Console.WriteLine("=================================================================");
+
+            // rest m to size of the matrix
+            m = n;
+            // calculate the sum of right-to-left diagonals
+            for (int i = 0; i < n; i++)
+            {
+                //Console.WriteLine("i is: " + i);
+                
+                m = m - 1;
+                Console.WriteLine("m: " + m);
+                for (int j = 0; j < n; j++)
+                {
+                    //Console.WriteLine("j before: " + j);
+                    if (j == m)
+                    {
+                        Console.WriteLine("j after: " + j);
+                        Console.WriteLine("arr[i][j]: " + arr[i][j]);
+                        rToLDiagDiff += arr[i][j];
+                        Console.WriteLine("sum: " + rToLDiagDiff);
+                    }
+
+                }
+            }
+            
+            Console.Write("Addition of the  right-to-left Diagonal elements is :{0}\n", rToLDiagDiff);
+
+            // calculate the absolute difference of both diagnols
+            diagonalDifference = Math.Abs(lToRDiagDiff - rToLDiagDiff);
+
+            return diagonalDifference;
         }
     }
 }
