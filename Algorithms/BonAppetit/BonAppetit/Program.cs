@@ -22,7 +22,7 @@ namespace BonAppetit
         {
             //Console.WriteLine("b is "  + b);
             int billTotal = 0;
-            int annaOws = 0;
+            int AnnaOws = 0;
             
             //Console.WriteLine("bill[k] " + bill[k]);
             for (int i = 0; i < bill.Count; i++)
@@ -30,17 +30,17 @@ namespace BonAppetit
                 billTotal += bill[i];
                 //Console.WriteLine("billTotal : " + billTotal);
             }
-            annaOws = (billTotal - bill[k]) / 2;
-            //Console.WriteLine("annaOws: " + annaOws);
-            if(b == annaOws)
+            AnnaOws = (billTotal - bill[k]) / 2;
+            //Console.WriteLine("annaOws: " + AnnaOws);
+            if(b == AnnaOws)
             {
-               // Console.WriteLine("inside if");
+                //Console.WriteLine("inside if");
                 Console.WriteLine("Bon Appetit");
             }
             else
             {
                 //Console.WriteLine("in else");
-                int amtBrianOwsAnna = b - annaOws;
+                int amtBrianOwsAnna = b - AnnaOws;
                 //Console.WriteLine("amtBrianOwsAnna: " + amtBrianOwsAnna);
             }
 
