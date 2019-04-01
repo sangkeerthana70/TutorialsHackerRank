@@ -30,6 +30,7 @@ namespace NumberGuessingGame
             int[] result = CalculateScore(gameCode, input);
         }
 
+        // program to calculate scores for correct number and position from a guess that is inputed
         public static int [] CalculateScore(int [] gameCode, int input)
         {
             int[] result = new int[2];
