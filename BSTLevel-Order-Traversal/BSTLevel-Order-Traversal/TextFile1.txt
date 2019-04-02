@@ -1,0 +1,23 @@
+﻿a-Like Singly Linked list the only way to traverse the next node is by moving the pointer 
+from the root node to the child node(preferably left child).
+b- To do this we need more than one pointer.  As we visit a node we can store the memory address
+of the node and address all its children in a queue so that we can visit them later.
+c-Once a node is in the queue it is called a discovered node whose address is known to us but we 
+have not visited it yet.
+
+Here is the funda behind it
+Root is the first node
+	* Step-1 Enqueue the root node by storing its memory address in the queue
+	* Step-2 Now we have atleast one discovered node in the queue i.e the queue 
+	  is not empty we can take out a node(dequeue) from the front visit it(visiting it means
+	  printing the value of that node) and then enqueue its children.
+
+
+
+
+
+	* Step-3 
+	* Step-4 So now we have one visited node and two discovered nodes
+	* Step-5 Repeat Step-2 dequeue the first node which is the left child
+	* Step-6 visit it and enqueue its children so a node with D as the parent node will have its 2 childern
+	* enqueued (b & e)
