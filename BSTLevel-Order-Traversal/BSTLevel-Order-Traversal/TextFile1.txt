@@ -11,13 +11,19 @@ Root is the first node
 	* Step-2 Now we have atleast one discovered node in the queue i.e the queue 
 	  is not empty we can take out a node(dequeue) from the front visit it(visiting it means
 	  printing the value of that node) and then enqueue its children.
+	* Keep repeating this until all the nodes in the queue is empty
+
+
+	Time Complexity
+	 The time taken by this algorithm will be proportional to the number of nodes.
+	 The  Big-O notation will be O(n).
+	 Since it takes constant time to visit each node as it is visited only once.
+	 By visiting the node we are reading the data in that node and inserting its children
+	 in the Queue.
+	 So irrespective of the shape or height of the tree it will still be constant time.
 
 
 
 
 
-	* Step-3 
-	* Step-4 So now we have one visited node and two discovered nodes
-	* Step-5 Repeat Step-2 dequeue the first node which is the left child
-	* Step-6 visit it and enqueue its children so a node with D as the parent node will have its 2 childern
-	* enqueued (b & e)
+	
