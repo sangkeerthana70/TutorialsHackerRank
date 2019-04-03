@@ -18,18 +18,7 @@ namespace BSTLevel_Order_Traversal
             root.left.left = new Node(1);
             root.right.left = new Node(4);
             root.right.right = new Node(7);
-
-
-
-            LevelOrderTraversal(root);
-
-  
-
-
-
-
-
-
+            levelOrderTraversal(root);
         }
         public static void PrintValues(IEnumerable myCollection)
         {
@@ -44,33 +33,44 @@ namespace BSTLevel_Order_Traversal
         * and inserted first will be visited first.     
         */
 
-        public static void LevelOrderTraversal(Node root)
+        public static void levelOrderTraversal(Node root)
         {
 
             //use Queue data structure to traverse the binary tree and print the nodes
-            Queue myQ = new Queue();
+            Queue<Node> myQ = new Queue<Node>();
+            Node currNode;
             
-            myQ.Enqueue(root.data);
-            myQ.Enqueue(null);
             if (root == null)
             {
                 return;
             }
+            else
+            {
+                myQ.Enqueue(root);
+            }
 
-
+                // while queue is not empty and has at least one node in it
                 while (myQ.Count > 0)             
                 {
-                    var currNode = myQ.Peek();
-                    Console.WriteLine("Visit current node and print its value: " + currNode);
-                    if(root.left != null)
+                    Node nodeInFrontOfQueue = myQ.Peek();
+                    // the dataType of the first element in a queue is a pointer to a node so we store it in Node variable
+                    Console.WriteLine(nodeInFrontOfQueue.GetType());
+                    Console.Write("Visit current node and print its value: " + nodeInFrontOfQueue.data + " ");
+                    //currNode = myQ.Dequeue();
+                    //Console.WriteLine("Visit current node and print its value: " + currNode.data);
+
+
+
+                    if (nodeInFrontOfQueue.left != null)
                     {
-                        myQ.Enqueue(root.left);
+                        myQ.Enqueue(nodeInFrontOfQueue.left);
                     }
-                    if (root.right != null)
+                    if (nodeInFrontOfQueue.right != null)
                     {
-                        myQ.Enqueue(root.right);
+                        myQ.Enqueue(nodeInFrontOfQueue.right);
                     }
                     myQ.Dequeue();
+                    Console.WriteLine();
                     Console.WriteLine("No of elements in the queue: {0}", myQ.Count);
                
                 }
