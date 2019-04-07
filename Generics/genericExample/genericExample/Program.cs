@@ -34,6 +34,7 @@ namespace genericExample
 
         public class Calculator
         {
+            // accepts a type independant parameter which enables code reusability with any data type
             public static bool AreEqual<T>(T value1, T value2)
             {
                 return value1.Equals(value2);
