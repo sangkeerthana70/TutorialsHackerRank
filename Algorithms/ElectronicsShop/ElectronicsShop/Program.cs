@@ -10,9 +10,9 @@ namespace ElectronicsShop
     {
         static void Main(string[] args)
         {
-            int input = 5;
-            int[] keyBoards = new int[] { 4 };
-            int[] usbDrives = new int[] { 5 };
+            int input = 60;
+            int[] keyBoards = new int[] { 40, 50, 60 };
+            int[] usbDrives = new int[] { 5, 8, 12 };
 
            
             int result = getMoneySpent(keyBoards, usbDrives, input);
@@ -26,46 +26,27 @@ namespace ElectronicsShop
         static int getMoneySpent(int[] keyboards, int[] drives, int b)
         {
             //Write your code here.
-            int maxKeyBoard = 0;
-            int maxUsbDrive = 0;
-            
-            for(var i = 0; i < keyboards.Length; i++)
+
+            int budget = b;
+            for(int i = 0; i < keyboards.Length; i++)
             {
-                int maxValue = int.MinValue;
+                for(int j = 0; j < drives.Length; j++)
+                {
+                    Console.WriteLine("j: " + j);
+                    Console.WriteLine(keyboards[i]);
+                    Console.WriteLine(drives[j]);
+                    if((keyboards[i] + drives[j]) <= budget)
+                    {
+                        Console.WriteLine("check: " + (keyboards[i] + drives[j]));
+                        budget = (keyboards[i] + drives[j]);
+                        Console.WriteLine("budget: " + budget);
+                    }
+                   
+                   
+                }
                 
-                if(keyboards[i] > maxValue)
-                {
-                    maxValue = keyboards[i];
-                    
-                    maxKeyBoard = maxValue;
-                }
-               
             }
-            Console.WriteLine("maxValue of keyboard: " + maxKeyBoard);
-            
-
-            for(var j = 0; j < drives.Length; j++)
-            {
-                int maxValue = int.MinValue;
-                if (drives[j] > maxValue)
-                {
-                    maxValue = drives[j];
-                    
-                    maxUsbDrive = maxValue;
-                }
-            }
-            Console.WriteLine("maxValue of drive : " + maxUsbDrive);
-
-            if(maxKeyBoard + maxUsbDrive <= b)
-            {
-                return maxKeyBoard + maxUsbDrive;
-            }
-            else
-            {
-                return -1;
-            }
-            
-
+            return -1;
         }
     }
 }
