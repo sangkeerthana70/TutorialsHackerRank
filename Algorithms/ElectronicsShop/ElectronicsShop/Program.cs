@@ -27,7 +27,8 @@ namespace ElectronicsShop
         {
             //Write your code here.
 
-            int budget = b;
+            int maxValue = -1;
+            int cost = 0;
             for(int i = 0; i < keyboards.Length; i++)
             {
                 for(int j = 0; j < drives.Length; j++)
@@ -35,18 +36,18 @@ namespace ElectronicsShop
                     Console.WriteLine("j: " + j);
                     Console.WriteLine(keyboards[i]);
                     Console.WriteLine(drives[j]);
-                    if((keyboards[i] + drives[j]) <= budget)
+
+                    cost = keyboards[i] + drives[j];
+                    if ((cost > maxValue) && (cost <= b))
                     {
-                        Console.WriteLine("check: " + (keyboards[i] + drives[j]));
-                        budget = (keyboards[i] + drives[j]);
-                        Console.WriteLine("budget: " + budget);
+                        Console.WriteLine("check: " + cost);
+                        maxValue = cost;
+                        Console.WriteLine("budget: " + maxValue);
                     }
-                   
-                   
                 }
-                
             }
-            return -1;
+
+            return maxValue;
         }
     }
 }
