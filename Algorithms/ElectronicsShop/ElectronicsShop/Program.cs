@@ -26,28 +26,31 @@ namespace ElectronicsShop
         static int getMoneySpent(int[] keyboards, int[] drives, int b)
         {
             //Write your code here.
-
             int maxValue = -1;
             int cost = 0;
             for(int i = 0; i < keyboards.Length; i++)
             {
+                Console.WriteLine("i : " + i);
                 for(int j = 0; j < drives.Length; j++)
                 {
-                    Console.WriteLine("j: " + j);
-                    Console.WriteLine(keyboards[i]);
-                    Console.WriteLine(drives[j]);
-
+                    Console.WriteLine("keyboards[i] " + keyboards[i]);
+                    Console.WriteLine("drives[j] " + drives[j]);
                     cost = keyboards[i] + drives[j];
-                    if ((cost > maxValue) && (cost <= b))
+                    Console.WriteLine("cost : " + cost);
+                    if((cost > maxValue) && (cost <= b))
                     {
-                        Console.WriteLine("check: " + cost);
                         maxValue = cost;
-                        Console.WriteLine("budget: " + maxValue);
                     }
+                    //if(cost < b)
+                    //{
+                    //    return maxValue;
+                    //}
+                    
                 }
             }
-
             return maxValue;
+
+
         }
     }
 }
