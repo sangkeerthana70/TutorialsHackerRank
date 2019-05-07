@@ -29,23 +29,14 @@ namespace ElectronicsShop
             int maxValue = -1;
             int cost = 0;
             for(int i = 0; i < keyboards.Length; i++)
-            {
-                Console.WriteLine("i : " + i);
+            {               
                 for(int j = 0; j < drives.Length; j++)
                 {
-                    Console.WriteLine("keyboards[i] " + keyboards[i]);
-                    Console.WriteLine("drives[j] " + drives[j]);
-                    cost = keyboards[i] + drives[j];
-                    Console.WriteLine("cost : " + cost);
+                    cost = keyboards[i] + drives[j];                  
                     if((cost > maxValue) && (cost <= b))
                     {
                         maxValue = cost;
-                    }
-                    //if(cost < b)
-                    //{
-                    //    return maxValue;
-                    //}
-                    
+                    }                  
                 }
             }
             return maxValue;
