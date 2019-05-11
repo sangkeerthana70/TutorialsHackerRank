@@ -11,7 +11,7 @@ namespace MakigAnagrams
         static void Main(string[] args)
         {
             string s1 = "cde";
-            string s2 = "dcf";
+            string s2 = "abc";
             int result = makingAnagrams(s1, s2);
 
         }
@@ -22,63 +22,64 @@ namespace MakigAnagrams
 
 
         // Complete the makingAnagrams function below.
+
         static int makingAnagrams(string s1, string s2)
         {
-            
-            int misMatchCount = 0;
+            int commonChar = 1;
+            int minDeletions = 0;
+            Dictionary<char, int> strDict1 = new Dictionary<char, int>();
 
-            for (int i = 0; i < s1.Length; i++)
+            for(int i = 0; i < s1.Length; i++)
             {
-                bool match = false;
-                Console.WriteLine("Outer loop : " + s1[i]);
-                for (int j = 0; j < s2.Length; j++)
+                if (strDict1.ContainsKey(s1[i]))
                 {
-                    Console.WriteLine("Inner loop : " + s2[j]);
-                    if (s1[i] == s2[j])
-                    {
-                        Console.WriteLine("match");
-                        match = true;
-                        break;
-                    }
-
+                    strDict1[s1[i]]++;
                 }
-                if(!match)
+                else
                 {
-                    misMatchCount += 1;
-                    Console.WriteLine("misMatchCount : " + misMatchCount);
+                    strDict1.Add(s1[i], 1);
                 }
-
-
-
             }
 
-            //compare string s2 with string s1
-            for (int i = 0; i < s2.Length; i++)
+            foreach(var item in strDict1)
             {
-                Console.WriteLine("outer loop: " + s2[i]);
-                bool match = false;
-                for (int j = 0; j < s1.Length; j++)
+                Console.WriteLine("item in a: " + item);
+            }
+            Console.WriteLine();
+
+            Dictionary<char, int> strDict2 = new Dictionary<char, int>();
+
+            for(int i = 0; i < s2.Length; i++)
+            {
+                if (strDict2.ContainsKey(s2[i]))
                 {
-                    Console.WriteLine("Inner loop: " + s1[j]);
-                    if (s2[i] == s1[j])
-                    {
-                        Console.WriteLine("match");
-                        match = true;
-                        break;
-                    }
+                    strDict2[s2[i]]++;
                 }
-                if (!match)
+                else
                 {
-                    Console.WriteLine("no match");
-                    misMatchCount += 1;
-                    Console.WriteLine("mismatchCount " + misMatchCount);
+                    strDict2.Add(s2[i], 1);
                 }
             }
-            Console.WriteLine("Mis match Letter Count: " + misMatchCount);
-            return misMatchCount;
+            foreach(var item in strDict2)
+            {
+                Console.WriteLine("item in b: " + item);
+            }
+
+            foreach(KeyValuePair<char, int> character in strDict1)
+            {
+                if(strDict2.ContainsKey(character.Key))
+                {
+                    Console.WriteLine("Common key: " + character);
+                    commonChar += 1;
+                    Console.WriteLine("commonChar count: " + commonChar);
+                    minDeletions = (s1.Length + s2.Length) - commonChar;
+                    Console.WriteLine("min deletions: " + minDeletions);
 
 
+                }
+            }
 
+            return minDeletions;
         }
     }
 }
