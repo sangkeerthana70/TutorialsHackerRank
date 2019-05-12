@@ -1,0 +1,67 @@
+﻿       // brute force solution
+	   
+	   static int makingAnagrams(string s1, string s2)
+        {
+            
+            int misMatchCount = 0;
+
+            for (int i = 0; i < s1.Length; i++)
+            {
+                bool match = false;
+                Console.WriteLine("Outer loop : " + s1[i]);
+                for (int j = 0; j < s2.Length; j++)
+                {
+                    Console.WriteLine("Inner loop : " + s2[j]);
+                    if (s1[i] == s2[j])
+                    {
+                        Console.WriteLine("match");
+                        match = true;
+                        break;
+                    }
+
+                }
+                if(!match)
+                {
+                    misMatchCount += 1;
+                    Console.WriteLine("misMatchCount : " + misMatchCount);
+                }
+
+
+
+            }
+
+            //compare string s2 with string s1
+            for (int i = 0; i < s2.Length; i++)
+            {
+                Console.WriteLine("outer loop: " + s2[i]);
+                bool match = false;
+                for (int j = 0; j < s1.Length; j++)
+                {
+                    Console.WriteLine("Inner loop: " + s1[j]);
+                    if (s2[i] == s1[j])
+                    {
+                        Console.WriteLine("match");
+                        match = true;
+                        break;
+                    }
+                }
+                if (!match)
+                {
+                    Console.WriteLine("no match");
+                    misMatchCount += 1;
+                    Console.WriteLine("mismatchCount " + misMatchCount);
+                }
+            }
+            Console.WriteLine("Mis match Letter Count: " + misMatchCount);
+            return misMatchCount;
+		}
+
+Notes:
+
+1)To make an anagram find the common characters in both the strings.
+Get its frequency Eg:If 'a' has 9 occurances in the first string and 7 ocurrances in second
+string. The difference of their key.value which is the frequency gives us the number of characters
+to be deleted.
+2) the above difference has to be added to the number of characters that is uncommon 
+in both the strings.
+3) add results in step 1 and step2.

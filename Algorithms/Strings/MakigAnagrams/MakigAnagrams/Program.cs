@@ -10,9 +10,10 @@ namespace MakigAnagrams
     {
         static void Main(string[] args)
         {
-            string s1 = "cde";
-            string s2 = "abc";
+            string s1 = "absdjkvuahdakejfnfauhdsaavasdlkj";
+            string s2 = "djfladfhiawasdkjvalskufhafablsdkashlahdfa";
             int result = makingAnagrams(s1, s2);
+            Console.WriteLine("result: " + result);
 
         }
 
@@ -25,7 +26,8 @@ namespace MakigAnagrams
 
         static int makingAnagrams(string s1, string s2)
         {
-            int commonChar = 1;
+            int commonCharCount1 = 0;
+            int commonCharCount2 = 0;
             int minDeletions = 0;
             Dictionary<char, int> strDict1 = new Dictionary<char, int>();
 
@@ -64,22 +66,44 @@ namespace MakigAnagrams
             {
                 Console.WriteLine("item in b: " + item);
             }
-
+            // find the uncommon chars in strDict1
             foreach(KeyValuePair<char, int> character in strDict1)
             {
-                if(strDict2.ContainsKey(character.Key))
+                if(!strDict2.ContainsKey(character.Key))
                 {
-                    Console.WriteLine("Common key: " + character);
-                    commonChar += 1;
-                    Console.WriteLine("commonChar count: " + commonChar);
-                    minDeletions = (s1.Length + s2.Length) - commonChar;
-                    Console.WriteLine("min deletions: " + minDeletions);
-
-
+                    Console.WriteLine("uncommon char.Key in strDict1 " + character.Key + character.Value);
+                    minDeletions += character.Value;
+                    Console.WriteLine("minDeletions in strDict1: " + minDeletions);
+                }               
+            }
+            // find the uncommon chars in strDict2
+            foreach (KeyValuePair<char, int> character in strDict2)
+            {
+                if (!strDict1.ContainsKey(character.Key))
+                {
+                    Console.WriteLine("uncommon char.Key in strDict2 " + character.Key + character.Value);
+                    minDeletions += character.Value;
+                    Console.WriteLine("minDeletions in strDict2: " + minDeletions);
                 }
             }
-
+            // find the common chars between both dicts by getting the key's value
+           foreach(KeyValuePair<char, int> character in strDict1)
+           {
+                Console.WriteLine("inside find common chars");
+                if (strDict2.ContainsKey(character.Key))
+                {
+                    commonCharCount1 = strDict1[character.Key];
+                    Console.WriteLine("common key of strDict1: " + commonCharCount1);
+                    commonCharCount2 = strDict2[character.Key];
+                    Console.WriteLine("common key of strDict2: " + commonCharCount2);//returns the value of the key
+                    Console.WriteLine("commonChar difference: " + Math.Abs(commonCharCount1 - commonCharCount2));
+                    minDeletions = Math.Abs(commonCharCount1 - commonCharCount2) + minDeletions;
+                    Console.WriteLine("minDeletions: " + minDeletions);
+                    
+                }
+           }
             return minDeletions;
+            
         }
     }
 }
