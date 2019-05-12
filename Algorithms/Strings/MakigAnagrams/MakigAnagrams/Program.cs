@@ -43,11 +43,11 @@ namespace MakigAnagrams
                 }
             }
 
-            foreach(var item in strDict1)
-            {
-                Console.WriteLine("item in a: " + item);
-            }
-            Console.WriteLine();
+            //foreach(var item in strDict1)
+            //{
+            //    Console.WriteLine("item in a: " + item);
+            //}
+            //Console.WriteLine();
 
             Dictionary<char, int> strDict2 = new Dictionary<char, int>();
 
@@ -62,18 +62,17 @@ namespace MakigAnagrams
                     strDict2.Add(s2[i], 1);
                 }
             }
-            foreach(var item in strDict2)
-            {
-                Console.WriteLine("item in b: " + item);
-            }
+            //foreach(var item in strDict2)
+            //{
+            //    Console.WriteLine("item in b: " + item);
+            //}
+
             // find the uncommon chars in strDict1
             foreach(KeyValuePair<char, int> character in strDict1)
             {
                 if(!strDict2.ContainsKey(character.Key))
-                {
-                    Console.WriteLine("uncommon char.Key in strDict1 " + character.Key + character.Value);
-                    minDeletions += character.Value;
-                    Console.WriteLine("minDeletions in strDict1: " + minDeletions);
+                {                    
+                    minDeletions += character.Value;                   
                 }               
             }
             // find the uncommon chars in strDict2
@@ -81,24 +80,20 @@ namespace MakigAnagrams
             {
                 if (!strDict1.ContainsKey(character.Key))
                 {
-                    Console.WriteLine("uncommon char.Key in strDict2 " + character.Key + character.Value);
-                    minDeletions += character.Value;
-                    Console.WriteLine("minDeletions in strDict2: " + minDeletions);
+                     minDeletions += character.Value;
                 }
             }
             // find the common chars between both dicts by getting the key's value
            foreach(KeyValuePair<char, int> character in strDict1)
            {
-                Console.WriteLine("inside find common chars");
                 if (strDict2.ContainsKey(character.Key))
                 {
                     commonCharCount1 = strDict1[character.Key];
-                    Console.WriteLine("common key of strDict1: " + commonCharCount1);
+                    //Console.WriteLine("common key of strDict1: " + character.Key +commonCharCount1);
                     commonCharCount2 = strDict2[character.Key];
-                    Console.WriteLine("common key of strDict2: " + commonCharCount2);//returns the value of the key
-                    Console.WriteLine("commonChar difference: " + Math.Abs(commonCharCount1 - commonCharCount2));
+                    //Console.WriteLine("common key of strDict2: " + commonCharCount2);//returns the value of the key
+                    //Console.WriteLine("commonChar difference: " + Math.Abs(commonCharCount1 - commonCharCount2));
                     minDeletions = Math.Abs(commonCharCount1 - commonCharCount2) + minDeletions;
-                    Console.WriteLine("minDeletions: " + minDeletions);
                     
                 }
            }
