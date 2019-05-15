@@ -19,35 +19,19 @@ namespace DrawingBook
         //Complete the pageCount function below.      
         static int pageCount(int n, int p)
         {
-            /*
-            int pageNumber = 1;
-            int pageTurns = 0;
-            while(pageNumber < p)
+            int pageViewNumber = p / 2;
+            Console.WriteLine("pageViewNum : " + pageViewNumber);
+            int lastPage = n / 2;
+            Console.WriteLine("lastpage: " + lastPage);
+            int flipFromBegining = pageViewNumber;
+            Console.WriteLine("flip from start: " + flipFromBegining);
+            int flipFromEnd = lastPage - pageViewNumber;
+            Console.WriteLine("flip from end: " + flipFromBegining);
+            if(flipFromBegining < flipFromEnd)
             {
-                if (pageNumber == p)
-                {
-                    break;
-                }
-                pageNumber++;
-                Console.WriteLine("pageNumber: " + pageNumber);
-                pageTurns++;
-                Console.WriteLine("pageTurns: " + pageTurns);
-                if()
+                return flipFromBegining;
             }
-            return pageTurns;
-            */
-
-            int total = n / 2;
-            Console.WriteLine("total " + total);
-            int right = p / 2;
-            Console.WriteLine("right " + right);
-            int left = total - right;
-            Console.WriteLine("left " + left);
-
-            if (left < right)
-                return left;
-            else
-                return right;
+            return flipFromEnd;
         }
     }
 }
