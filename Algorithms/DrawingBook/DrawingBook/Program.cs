@@ -20,13 +20,13 @@ namespace DrawingBook
         static int pageCount(int n, int p)
         {
             int pageViewNumber = p / 2;
-            Console.WriteLine("pageViewNum : " + pageViewNumber);
+            
             int lastPage = n / 2;
-            Console.WriteLine("lastpage: " + lastPage);
+            
             int flipFromBegining = pageViewNumber;
-            Console.WriteLine("flip from start: " + flipFromBegining);
+            
             int flipFromEnd = lastPage - pageViewNumber;
-            Console.WriteLine("flip from end: " + flipFromBegining);
+            
             if(flipFromBegining < flipFromEnd)
             {
                 return flipFromBegining;
